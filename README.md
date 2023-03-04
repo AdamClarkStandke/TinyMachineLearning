@@ -30,6 +30,8 @@ This repository will implement most of the chapters from the book [TinyML Cookbo
 
 ## Chapter 4: Voice Controlling LEDS with Edge Impulse
 
+**Gathering Data, Training, Optimizing, & Testing Model**
+
 [voice controlling leds](https://studio.edgeimpulse.com/public/193428/latest)
 
 -------------------------------------------------------------------------------
