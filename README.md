@@ -28,7 +28,7 @@ This repository will implement most of the chapters from the book [TinyML Cookbo
 | RAM | 264KB |
 | SIZE | 51x21mm |
 
-## Chapter 2
+## Chapter 4: Voice Controlling LEDS with Edge Impulse
 
 
 
