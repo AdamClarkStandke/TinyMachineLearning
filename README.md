@@ -32,7 +32,8 @@ This repository will implement most of the chapters from the book [TinyML Cookbo
 
 **Gathering Data, Training, Optimizing, & Testing Model**
 
-[voice controlling leds](https://studio.edgeimpulse.com/public/193428/latest)
+[![voice controlling leds](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Screenshot%20from%202023-03-04%2013-15-56.png)](https://studio.edgeimpulse.com/public/193428/latest/learning/keras/8)
+
 
 -------------------------------------------------------------------------------
 ## Reference:
