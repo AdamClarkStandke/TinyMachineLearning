@@ -36,7 +36,7 @@ This repository will implement most of the chapters from the book [TinyML Cookbo
 
 ## Chapter 5: Indoor Scene Classification
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/magic.gif)
+![]()
 
 -------------------------------------------------------------------------------
 ## Reference:
