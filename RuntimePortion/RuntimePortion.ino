@@ -11,12 +11,13 @@
 #include <tensorflow/lite/schema/schema_generated.h>
 #include <tensorflow/lite/version.h>
 
-static const char *label[] = {"bathroom", "kitchen", "unknown"};
+static const char *label[] = {"bathroom", "kitchen"};
 static int bytes_per_frame;
 static int bytes_per_pixel;
 static bool debug_application = false;
 
 static uint8_t data[160 * 120 * 2]; // QQVGA: 160x120 X 2 bytes per pixel (YUV422)
+
 
 static int w0 = 0;
 static int h0 = 0;
@@ -205,14 +206,8 @@ void loop() {
         c_f = rescale((float)c_i, 1.f/255.f, -1.f);
         c_q = quantize(c_f, tflu_scale, tflu_zeropoint);
         tflu_i_tensor->data.int8[idx++] = c_q;
-        if(debug_application) {
-          Serial.println(c_i);
-        }
       }
     }
-  }
-  if(debug_application) {
-    Serial.println("</image>");
   }
   // Run inference
   TfLiteStatus invoke_status = tflu_interpreter->Invoke();
@@ -229,6 +224,25 @@ void loop() {
       pb_max = tflu_o_tensor->data.f[ix];
     }
   }
-
-  Serial.println(label[ix_max]);
+  Serial.println("<image>");
+  Serial.println(Camera.width());
+  Serial.println(Camera.height());
+  const int step_bytes = bytes_per_pixel * 2;
+  for(int i = 0; i < bytes_per_frame; i+=bytes_per_pixel * 2) {
+      // Note: U and V are swapped
+    	const int32_t Y0 = data[i + 0];
+    	const int32_t Cr = data[i + 1];
+    	const int32_t Y1 = data[i + 2];
+    	const int32_t Cb = data[i + 3];
+      ycbcr422_rgb888(Y0, Cb, Cr, &rgb888[0]);
+      Serial.println(rgb888[0]);
+      Serial.println(rgb888[1]);
+      Serial.println(rgb888[2]);
+      ycbcr422_rgb888(Y1, Cb, Cr, &rgb888[0]);
+      Serial.println(rgb888[0]);
+      Serial.println(rgb888[1]);
+      Serial.println(rgb888[2]);
+  }
+  Serial.println("</image>");
+  Serial.println(label[ix_max]); 
 }
