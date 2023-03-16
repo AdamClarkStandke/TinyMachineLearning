@@ -36,7 +36,17 @@ This repository will implement most of the chapters from the book [TinyML Cookbo
 
 ## Chapter 5: Indoor Scene Classification
 
+**Camera Setup**
+
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0312.jpg)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0315.jpg)
+
+
+**Scene Classification**
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmp70nqe3ui.PNG)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmpcw8zqjn7.PNG)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmpehal6xl2.PNG)
 
 -------------------------------------------------------------------------------
 ## Reference:
