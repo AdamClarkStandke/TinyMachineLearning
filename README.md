@@ -55,7 +55,9 @@ Implementation of [Get Started With Machine Learning on Arduino](https://docs.ar
 
 ## Reading Temperature&Humidity Values over Bluetooth
 
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/homescreen.png)
 
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SensorReads.png)
 
 -------------------------------------------------------------------------------
 ## Reference:
