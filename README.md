@@ -82,6 +82,8 @@ Raw data can be found [here](https://github.com/AdamClarkStandke/TinyMachineLear
 
 ## Reading Temperature&Humidity Values over Bluetooth
 
+The blue box represents temperature and the red box represents humidity (room kinda hot lol)
+
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/homescreen.png)
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SensorReads.png)
