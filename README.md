@@ -52,6 +52,27 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 
 Implementation of [Get Started With Machine Learning on Arduino](https://docs.arduino.cc/tutorials/nano-33-ble-sense-rev2/get-started-with-machine-learning#capturing-gesture-training-data) by Sandeep Mistry and Dominic Pajak. A gesture classifier is created to play Street Fighter as detailed by Charlie Gerard in [Play Street Fighter with body movements using Arduino and Tensorflow.js](https://medium.com/@devdevcharlie/play-street-fighter-with-body-movements-using-arduino-and-tensorflow-js-6b0e4734e118).
 
+### Getting Gesture Data with BMI270 and BMM150 Sensors
+
+The x-axis represents the num of samples and the y-axis represents g-force from the accelerometer and degrees per second from the gyroscope. 
+
+**Jab Data**
+
+Acceleration Graph:
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/punch_acceleration_xyz.png)
+Angular velocity Graph:
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/punch_gyroscope_xyz.png)
+
+Raw data can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/punch.csv)
+
+**Upper Cut Data**
+
+Acceleration Graph:
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upperCut_acceleration_xyz.png)
+Angular velocity Graph:
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upperCut_gyroscoe_xyz.png)
+
+Raw data can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upper_cut.csv)
 
 ## Reading Temperature&Humidity Values over Bluetooth
 
