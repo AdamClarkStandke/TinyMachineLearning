@@ -84,7 +84,16 @@ Raw data can be found [here](https://github.com/AdamClarkStandke/TinyMachineLear
 
 The learning curves after 300 epochs of training mixed with validation as seen below:
 
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Training_val_loss_.jpg)
+
+with the following model and trainable paramaters:
+
+| Layer (type)| Output Shape| Param #|
+| ------------- | ------------- |--------|
+| Dense | 50| 35,750|
+| Dense | 15| 765|
+| Dense | 2| 32|
+
 
 ## Reading Temperature&Humidity Values over Bluetooth
 
