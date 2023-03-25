@@ -59,18 +59,24 @@ The x-axis represents the num of samples and the y-axis represents g-force from 
 **Jab Data**
 
 Acceleration Graph:
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/punch_acceleration_xyz.png)
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/jab_accel.jpg)
+
 Angular velocity Graph:
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/punch_gyroscope_xyz.png)
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/jab_gyro.jpg)
 
 Raw data can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/punch.csv)
 
 **Upper Cut Data**
 
 Acceleration Graph:
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upperCut_acceleration_xyz.png)
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upper_accel.jpg)
+
 Angular velocity Graph:
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upperCut_gyroscoe_xyz.png)
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upper_gyro.jpg)
 
 Raw data can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upper_cut.csv)
 
