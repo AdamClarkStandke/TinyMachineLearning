@@ -80,6 +80,12 @@ Angular velocity Graph:
 
 Raw data can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/upper_cut.csv)
 
+### Training and Validation Learning Curves 
+
+The learning curves after 300 epochs of training mixed with validation as seen below:
+
+![]()
+
 ## Reading Temperature&Humidity Values over Bluetooth
 
 The blue box represents temperature and the red box represents humidity (room kinda hot lol)
