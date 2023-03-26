@@ -98,6 +98,10 @@ with the following model and trainable paramaters:
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/streetfighter.png)
 
+Ino Code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/gestureDetection_classifier/gestureDetection_classifier.ino)
+
+C-Bytye Model can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/gestureDetection_classifier/model.h)
+
 ## Reading Temperature&Humidity Values over Bluetooth
 
 The blue box represents temperature and the red box represents humidity (room kinda hot lol)
