@@ -50,7 +50,7 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 
 ## Get Started With Machine Learning on Arduino
 
-Implementation of [Get Started With Machine Learning on Arduino](https://docs.arduino.cc/tutorials/nano-33-ble-sense-rev2/get-started-with-machine-learning#capturing-gesture-training-data) by Sandeep Mistry and Dominic Pajak. A gesture classifier is created to play Street Fighter as detailed by Charlie Gerard in [Play Street Fighter with body movements using Arduino and Tensorflow.js](https://medium.com/@devdevcharlie/play-street-fighter-with-body-movements-using-arduino-and-tensorflow-js-6b0e4734e118).
+Implementation of [Get Started With Machine Learning on Arduino](https://docs.arduino.cc/tutorials/nano-33-ble-sense-rev2/get-started-with-machine-learning#capturing-gesture-training-data) by Sandeep Mistry and Dominic Pajak. A gesture classifier is created to play Street Fighter as detailed by Charlie Gerard in [Play Street Fighter with body movements using Arduino and Tensorflow.js](https://medium.com/@devdevcharlie/play-street-fighter-with-body-movements-using-arduino-and-tensorflow-js-6b0e4734e118). Full implementation can be found [here](https://github.com/arduino/AIoT-Dev-Summit-2019)
 
 ### Getting Gesture Data with BMI270 and BMM150 Sensors
 
@@ -94,6 +94,9 @@ with the following model and trainable paramaters:
 | Dense | 15| 765|
 | Dense | 2| 32|
 
+### Gesture Sense Emmoji Fighting
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Training_val_loss_.jpg)
 
 ## Reading Temperature&Humidity Values over Bluetooth
 
