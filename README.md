@@ -94,9 +94,9 @@ with the following model and trainable paramaters:
 | Dense | 15| 765|
 | Dense | 2| 32|
 
-### Gesture Sense Emmoji Fighting
+### Gesture Sense Emmoji Keyboard
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/streetfighter.png)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/streetfighter.png)](https://youtu.be/awRqHDJUKUs)
 
 Ino Code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/gestureDetection_classifier/gestureDetection_classifier.ino)
 
