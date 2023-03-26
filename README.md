@@ -96,7 +96,7 @@ with the following model and trainable paramaters:
 
 ### Gesture Sense Emmoji Fighting
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Training_val_loss_.jpg)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/streetfighter.png)
 
 ## Reading Temperature&Humidity Values over Bluetooth
 
