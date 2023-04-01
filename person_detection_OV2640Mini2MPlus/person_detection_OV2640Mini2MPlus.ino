@@ -12,7 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
-
+#include <ArduinoBLE.h>
 #include <TensorFlowLite.h>
 
 #include "main_functions.h"
@@ -101,7 +101,7 @@ void setup() {
 void loop() {
   // Get image from provider.
   if (kTfLiteOk != GetImage(error_reporter, kNumCols, kNumRows, kNumChannels,
-                            input->data.int8)) {
+                            input->data.uint8)) {
     TF_LITE_REPORT_ERROR(error_reporter, "Image capture failed.");
   }
 

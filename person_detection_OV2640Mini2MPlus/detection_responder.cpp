@@ -24,9 +24,10 @@ const int led_blue = 24;
 
 // Flash the blue LED after each inference
 void RespondToDetection(tflite::ErrorReporter* error_reporter,
-                        signed char person_score, signed char no_person_score) {
+                        uint8_t person_score, uint8_t no_person_score) {
   static bool is_initialized = false;
   if (!is_initialized) {
+    pinMode(led_red, OUTPUT);
     pinMode(led_green, OUTPUT);
     pinMode(led_blue, OUTPUT);
     is_initialized = true;
@@ -44,8 +45,8 @@ void RespondToDetection(tflite::ErrorReporter* error_reporter,
   delay(100);
   digitalWrite(led_blue, HIGH);
 
-  // Switch on the green LED when a person is detected,
-  // the red when no person is detected
+  // Switch on the red LED when a person is detected,
+  // the green led when no person is detected
   if (person_score > no_person_score) {
     digitalWrite(led_green, LOW);
     digitalWrite(led_red, HIGH);

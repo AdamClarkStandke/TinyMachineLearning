@@ -143,7 +143,7 @@ TfLiteStatus ReadData(tflite::ErrorReporter* error_reporter) {
 // Decode the JPEG image, crop it, and convert it to greyscale
 TfLiteStatus DecodeAndProcessImage(tflite::ErrorReporter* error_reporter,
                                    int image_width, int image_height,
-                                   signed char* image_data) {
+                                   uint8_t* image_data) {
   error_reporter->Report("Decoding JPEG and converting to greyscale");
   // Parse the JPEG headers. The image will be decoded as a sequence of Minimum
   // Coded Units (MCUs), which are 16x8 blocks of pixels.
@@ -227,7 +227,7 @@ TfLiteStatus DecodeAndProcessImage(tflite::ErrorReporter* error_reporter,
 
 // Get an image from the camera module
 TfLiteStatus GetImage(tflite::ErrorReporter* error_reporter, int image_width,
-                      int image_height, int channels, signed char* image_data) {
+                      int image_height, int channels, uint8_t* image_data) {
   static bool g_is_camera_initialized = false;
   if (!g_is_camera_initialized) {
     TfLiteStatus init_status = InitCamera(error_reporter);
