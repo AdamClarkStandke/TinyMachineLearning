@@ -33,10 +33,7 @@ void RespondToDetection(tflite::ErrorReporter* error_reporter,
     is_initialized = true;
   }
 
-  // Note: The RGB LEDs on the Arduino Nano 33 BLE
-  // Sense are on when the pin is LOW, off when HIGH.
-
-  // Switch the person/not person LEDs off
+  // Switch the person/not person LEDs on
   digitalWrite(led_green, HIGH);
   digitalWrite(led_red, HIGH);
 
@@ -45,8 +42,8 @@ void RespondToDetection(tflite::ErrorReporter* error_reporter,
   delay(100);
   digitalWrite(led_blue, HIGH);
 
-  // Switch on the red LED when a person is detected,
-  // the green led when no person is detected
+  // Switch the red LED on when a person is detected,
+  // and switch the green led on when no person is detected
   if (person_score > no_person_score) {
     digitalWrite(led_green, LOW);
     digitalWrite(led_red, HIGH);
