@@ -28,7 +28,7 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 | RAM | 264KB |
 | SIZE | 51x21mm |
 
-## Chapter 4: Voice Controlling LEDS with Edge Impulse
+## Book: Voice Controlling LEDS with Edge Impulse
 
 **Gathering Data, Training, Optimizing, & Testing Model**
 
@@ -48,7 +48,7 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmpcw8zqjn7.PNG)
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmpehal6xl2.PNG)
 
-## Get Started With Machine Learning on Arduino
+## Project: Get Started With Machine Learning on Arduino
 
 Implementation of [Get Started With Machine Learning on Arduino](https://docs.arduino.cc/tutorials/nano-33-ble-sense-rev2/get-started-with-machine-learning#capturing-gesture-training-data) by Sandeep Mistry and Dominic Pajak. A gesture classifier is created to play Street Fighter as detailed by Charlie Gerard in [Play Street Fighter with body movements using Arduino and Tensorflow.js](https://medium.com/@devdevcharlie/play-street-fighter-with-body-movements-using-arduino-and-tensorflow-js-6b0e4734e118). Full implementation can be found [here](https://github.com/arduino/AIoT-Dev-Summit-2019)
 
@@ -102,7 +102,7 @@ Ino Code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLear
 
 C-Bytye Model can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/gestureDetection_classifier/model.h)
 
-## Reading Temperature&Humidity Values over Bluetooth
+## Project: Reading Temperature&Humidity Values over Bluetooth
 
 The blue box represents temperature and the red box represents humidity (room kinda hot lol)
 
@@ -110,7 +110,7 @@ The blue box represents temperature and the red box represents humidity (room ki
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SensorReads.png)
 
-## Person Detection 
+## Project: Person Detection 
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0328.jpg)](https://youtu.be/vxXALj3QExY)
 
