@@ -116,18 +116,19 @@ The blue box represents temperature and the red box represents humidity (room ki
 
 Implementation of the person detection example as detailed by the Official Tenserflow Repo as of Oct 9, 2019 and [anaferrez's implemenation](https://projecthub.arduino.cc/anaferraz/ee255f8f-ba55-4e0a-93b2-3d4d373e7c8d). In my code, for the Nano 33 BLE Sense Rev2 board, when a person is detected (within the model's degrees of confidence) onboard led turns RED; when a person is not detected (again within the model's degrees of confidence) onboard led turns GREEN; and all other times flashes BLUE. As seen from the video, inferencing is not super accurate but pretty good! The Nano 33 BLE Sense Rev2 board is connected to the [ArduCam OV2640 MINI 2MP-Plus](https://www.amazon.com/dp/B012UXNDOY?ref_=pe_386300_442746000_DDT_E_DDE_dt_1)
 
-Ino Code can be found [here]
+Ino Code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/person_detection_OV2640Mini2MPlus.ino)
 
-C-Bytye Model can be found [here]
+C-Bytye Model can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/person_detect_model_data.cpp)
 
-TFLM Image Processing code can be found [here]
+TFLM Image Processing code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/image_provider.cpp)
 
-TFLM Person detection code can be found [here]
+TFLM Person detection code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/detection_responder.cpp)
 
-And all the other files such as required headers can be found in this [directory]
+And all the other files such as required headers can be found in this [directory](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/person_detection_OV2640Mini2MPlus) that need to be included in the sketch for it to run.[^2]
 
 
 
 -------------------------------------------------------------------------------
 ## Reference:
 [^1]: [TinyML](https://www.tinyml.org/about/)
+[^2]: Need to also get the get [ArduCam OV2640 MINI 2MP-Plus header file](https://github.com/ArduCAM/Arduino); choose the right camera module in the memorysaver.h; and download the JPEG library for things to work
