@@ -34,7 +34,7 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 
 [![voice controlling leds](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Screenshot%20from%202023-03-04%2013-15-56.png)](https://studio.edgeimpulse.com/public/193428/latest/learning/keras/8)
 
-## Chapter 5: Indoor Scene Classification
+## Book: Indoor Scene Classification
 
 **Camera Setup**
 
