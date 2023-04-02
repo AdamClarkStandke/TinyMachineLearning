@@ -33,7 +33,7 @@ void RespondToDetection(tflite::ErrorReporter* error_reporter,
     is_initialized = true;
   }
 
-  // Switch the person/not person LEDs on
+  // Switch the person/not person LEDs off due to individual LEDs be active LOW
   digitalWrite(led_green, HIGH);
   digitalWrite(led_red, HIGH);
 
@@ -45,11 +45,13 @@ void RespondToDetection(tflite::ErrorReporter* error_reporter,
   // Switch the red LED on when a person is detected,
   // and switch the green led on when no person is detected
   if (person_score > no_person_score) {
+    digitalWrite(led_green, HIGH);
+    //should only give RED light on now 
+    digitalWrite(led_red, LOW);
+  } else {
+    //should only give GREEN light on now
     digitalWrite(led_green, LOW);
     digitalWrite(led_red, HIGH);
-  } else {
-    digitalWrite(led_green, HIGH);
-    digitalWrite(led_red, LOW);
   }
 
   error_reporter->Report("Person score: %d No person score: %d", person_score,
