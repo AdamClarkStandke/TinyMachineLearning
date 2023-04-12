@@ -131,7 +131,7 @@ And all the other files such as required headers can be found in this [directory
 
 ## LED Project: 24-LED NeoPixel
 
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ledRing.png](https://youtu.be/hxCp7cTqXQk)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ledRing.png)](https://youtu.be/hxCp7cTqXQk)
 
 -------------------------------------------------------------------------------
 ## Reference:
