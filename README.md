@@ -29,6 +29,8 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 |Wifi| 2.4GHz single band, 802.11n 
 | SIZE | 51x21mm |
 
+As bought and documented [here](https://www.adafruit.com/product/5526)
+
 ## Book: Voice Controlling LEDS with Edge Impulse
 
 **Gathering Data, Training, Optimizing, & Testing Model**
@@ -127,9 +129,9 @@ TFLM Person detection code can be found [here](https://github.com/AdamClarkStand
 
 And all the other files such as required headers can be found in this [directory](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/person_detection_OV2640Mini2MPlus) that need to be included in the sketch for it to run.[^2]
 
-## LED Pr0ject: 24-LED NeoPixel
+## LED Project: 24-LED NeoPixel
 
-[![CLICK HERE]()](https://youtu.be/hxCp7cTqXQk)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ledRing.png](https://youtu.be/hxCp7cTqXQk)
 
 -------------------------------------------------------------------------------
 ## Reference:
