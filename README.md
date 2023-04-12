@@ -1,6 +1,6 @@
 # TinyMachineLearning
 
-Developing Embedded Applications from the book TinyML Cookbook by Gian Iodice &amp; Ronan Naughton. 
+Developing Embedded Applications that for the most part deal with machine learning as detailedfrom the book TinyML Cookbook by Gian Iodice &amp; Ronan Naughton. 
 
 Tiny machine learning is broadly defined as a fast growing field of machine learning technologies and applications including hardware (dedicated integrated circuits), algorithms and software capable of performing on-device sensor (vision, audio, IMU, biomedical, etc.) data analytics at extremely low power, typically in the mW range and below, and hence enabling a variety of always-on use-cases and targeting battery operated devices.[^1]
 
@@ -19,13 +19,14 @@ This repository will implement most of the chapters from the book [TinyML Cookbo
 
 As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-ble-sense-rev2?selectedStore=us)
 
-**Rasperry PI**
+**RasperryPI Pico W RP2040 MicroController**
 
 | | Description |
 | --- | --- |
 | CPU | Dual core Arm Cortex-M0+ 133MHz |
 | FLASH | 2MB |
 | RAM | 264KB |
+|Wifi| 2.4GHz single band, 802.11n 
 | SIZE | 51x21mm |
 
 ## Book: Voice Controlling LEDS with Edge Impulse
@@ -126,7 +127,9 @@ TFLM Person detection code can be found [here](https://github.com/AdamClarkStand
 
 And all the other files such as required headers can be found in this [directory](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/person_detection_OV2640Mini2MPlus) that need to be included in the sketch for it to run.[^2]
 
+## LED Pr0ject: 24-LED NeoPixel
 
+[![CLICK HERE]()](https://youtu.be/hxCp7cTqXQk)
 
 -------------------------------------------------------------------------------
 ## Reference:
