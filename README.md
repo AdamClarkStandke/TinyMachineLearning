@@ -19,7 +19,7 @@ This repository will implement most of the chapters from the book [TinyML Cookbo
 
 As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-ble-sense-rev2?selectedStore=us)
 
-**RasperryPI Pico W RP2040 MicroController**
+**Rasperry Pi Pico W RP2040 MicroController**
 
 | | Description |
 | --- | --- |
@@ -115,6 +115,8 @@ The blue box represents temperature and the red box represents humidity (room ki
 
 ## Project: Person Detection 
 
+### Arduino Nano 33 BLE Sense Rev2
+
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0328.jpg)](https://youtu.be/d5dRwel8NFQ)
 
 Implementation of the person detection example as detailed by the Official Tenserflow Repo as of Oct 9, 2019 and [anaferrez's implemenation](https://projecthub.arduino.cc/anaferraz/ee255f8f-ba55-4e0a-93b2-3d4d373e7c8d). In my code, for the Nano 33 BLE Sense Rev2 board, when a person is detected (within the model's degrees of confidence) onboard led turns RED; when a person is not detected (again within the model's degrees of confidence) onboard led turns GREEN; and all other times flashes BLUE. As seen from the video, inferencing is not super accurate but pretty good! The Nano 33 BLE Sense Rev2 board is connected to the [ArduCam OV2640 MINI 2MP-Plus](https://www.amazon.com/dp/B012UXNDOY?ref_=pe_386300_442746000_DDT_E_DDE_dt_1)
@@ -128,6 +130,12 @@ TFLM Image Processing code can be found [here](https://github.com/AdamClarkStand
 TFLM Person detection code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/detection_responder.cpp)
 
 And all the other files such as required headers can be found in this [directory](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/person_detection_OV2640Mini2MPlus) that need to be included in the sketch for it to run.[^2]
+
+## Rasperry Pi Pico W 
+
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0336(1).jpg)](https://www.youtube.com/watch?v=MaYkYJmJrqk)
+
+Implementation of the person detection example as detailed by the [ArduCam Team](https://github.com/ArduCAM/RPI-Pico-Cam)
 
 ## LED Project: 24-LED NeoPixel
 
