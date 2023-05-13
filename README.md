@@ -141,6 +141,10 @@ Implementation of the person detection example as detailed by the [ArduCam Team]
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ledRing.png)](https://youtu.be/hxCp7cTqXQk)
 
+## Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneFlightController.png)
+
 -------------------------------------------------------------------------------
 ## Reference:
 [^1]: [TinyML](https://www.tinyml.org/about/)
