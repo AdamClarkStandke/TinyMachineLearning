@@ -149,6 +149,10 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/dronesch.png)
 
+Partlist can be found [here]()
+
+Netlist can be found [here]()
+
 ### PCB
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone2pcb.png)
