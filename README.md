@@ -141,10 +141,18 @@ Implementation of the person detection example as detailed by the [ArduCam Team]
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ledRing.png)](https://youtu.be/hxCp7cTqXQk)
 
-## Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
+## Project: Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneFlightController.png)
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/pcb.png)
+This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and plans to incorporate the Nanao's 33 BLE Sense Rev2's AI capabilites when adding a camera to the drone (i.e. scene classification, person detection etc). Since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The latest schematic version and Pcb is listed below (more comments/details coming soon).
+
+### Schematic
+
+![]()
+
+### PCB
+
+![]()
+
 -------------------------------------------------------------------------------
 ## Reference:
 [^1]: [TinyML](https://www.tinyml.org/about/)
