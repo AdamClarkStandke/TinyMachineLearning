@@ -147,11 +147,11 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 
 ### Schematic
 
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/dronesch.png)
 
 ### PCB
 
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone2pcb.png)
 
 -------------------------------------------------------------------------------
 ## Reference:
