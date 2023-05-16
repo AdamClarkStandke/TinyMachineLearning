@@ -147,7 +147,7 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 
 ### Schematic
 
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneSchematicV3.png)
 
 Partlist can be found [here]()
 
