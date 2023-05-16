@@ -155,7 +155,7 @@ Partlist can be found [here]()
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone2pcb.png)
 
-Netlist can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/netlist)
+Netlist can be found [here]()
 
 -------------------------------------------------------------------------------
 ## Reference:
