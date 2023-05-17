@@ -154,7 +154,7 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/nano_carrier_th.png)
 
-Assembly details and Gerber files can be found [here]()
+Assembly details and Gerber files can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/CAMOutputs)
 
 -------------------------------------------------------------------------------
 ## Reference:
