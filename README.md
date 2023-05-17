@@ -147,7 +147,7 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 
 ### Schematic
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneSchematicV3.png)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneSchematicV4.png)
 
 
 ### PCB
