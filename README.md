@@ -145,16 +145,21 @@ Implementation of the person detection example as detailed by the [ArduCam Team]
 
 This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and plans to incorporate the Nanao's 33 BLE Sense Rev2's AI capabilites when adding a camera to the drone (i.e. scene classification, person detection etc). Since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The latest schematic version and Pcb is listed below (more comments/details coming soon).
 
-### Schematic
+### Schematic and PCB layout:
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneSchematicV4.png)
 
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SparkFunGerber/nano_carrier_th.png)
 
-### PCB
+Gerber and DXF files can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/SparkFunGerber).
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/nano_carrier_th.png)
+Components can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/partlist). 
 
-Assembly details and Gerber files can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/CAMOutputs)
+### PCB Fabrication and Construction:
+
+### Programming the Flight Control System: 
+
+### Resuslts:
 
 -------------------------------------------------------------------------------
 ## Reference:
