@@ -143,17 +143,21 @@ Implementation of the person detection example as detailed by the [ArduCam Team]
 
 ## Project: Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
 
-This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and plans to incorporate the Nanao's 33 BLE Sense Rev2's AI capabilites when adding a camera to the drone (i.e. scene classification, person detection etc). Since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The latest schematic version and Pcb is listed below (more comments/details coming soon).
+This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and will incorporate the Nano 33 BLE Sense Rev2 for its AI capabilites using the [ArduCam OV2640 MINI 2MP-Plus](https://www.amazon.com/dp/B012UXNDOY?ref_=pe_386300_442746000_DDT_E_DDE_dt_1) camera for scene classification and person detection purposes. Since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The only thing I added was a step-up voltage converter/booster for the lipo 3.7V+ battery that powers Nano's vin pin. The finished  schematic version and Pcb is listed below.
 
 ### Schematic and PCB layout:
 
+**Schematic**
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-05-21.png)
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/droneboard.png)
+**Top View**
+![]()
 
-Gerber files can be found [here]().
+**Bottom View**
+![]()
 
-Components can be found [here](). 
+Gerber file can be found [here]().
+BOM CSV can be found [here](). 
 
 ### PCB Fabrication and Construction:
 
