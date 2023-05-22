@@ -147,13 +147,13 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 
 ### Schematic and PCB layout:
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneSchematicV4.png)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-05-21.png)
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SparkFunGerber/nano_carrier_th.png)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/droneboard.png)
 
-Gerber and DXF files can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/SparkFunGerber).
+Gerber files can be found [here]().
 
-Components can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/partlist). 
+Components can be found [here](). 
 
 ### PCB Fabrication and Construction:
 
