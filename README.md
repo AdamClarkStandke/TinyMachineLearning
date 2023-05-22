@@ -151,15 +151,16 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-05-21.png)
 
 **Top View**
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/topview.png)
 
 **Bottom View**
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/bottomview.png)
 
-Gerber file can be found [here]().
-BOM CSV can be found [here](). 
+Gerber file can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB5_2023-05-22.zip).
+BOM CSV can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/BOM_Board1_PCB5_2023-05-22%20(1).csv). 
 
 ### PCB Fabrication and Construction:
+
 
 ### Programming the Flight Control System: 
 
