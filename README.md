@@ -159,12 +159,24 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 Gerber file can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB5_2023-05-22.zip).
 BOM CSV can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/BOM_Board1_PCB5_2023-05-22%20(1).csv). 
 
-### PCB Fabrication and Construction:
+### PCB Fabrication:
 
+PCB Fabrication was done by [EasyEda](https://easyeda.com/) and was shipped within 2-3 business days (FAST!!!). The first two images are a top view and bottom view of the fabricated board and the third image is the pcb board with it being fit with the Arduino Nano 33 BLE Sense Rev2 Microcontroller. 
+
+**Top View**
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0342.jpg)
+
+**Bottom View**
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0346.jpg)
+
+**Arduino Top View**
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0352.jpg)
+
+### Construction:
 
 ### Programming the Flight Control System: 
 
-### Resuslts:
+### Testing and Resuslts:
 
 -------------------------------------------------------------------------------
 ## Reference:
