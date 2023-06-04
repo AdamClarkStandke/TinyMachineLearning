@@ -150,7 +150,7 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 Flight Controller. Basically follows the [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/) PCB Schematic only slight differences as mentioned above:
 
 **Schematic**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-05-21.png)
+![]()
 
 [EasyEda](https://easyeda.com/) includes a great free feature of seeing what the completed PCB will look like once produced and assembeld, as shown below:
 
