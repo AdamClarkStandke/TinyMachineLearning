@@ -178,9 +178,9 @@ PCB Fabrication was done by [EasyEda](https://easyeda.com/) and was shipped with
 
 **BLE Communication**
 
-JoyStick Controller for the [Central Device]() 
+JoyStick Controller for the [Central Device](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/central_joystick.zip) 
 
-Flight controller for the [Peripheral Device]()
+Flight controller for the [Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/perp_motor_control.zip)
 
 ### Testing and Resuslts:
 
