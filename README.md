@@ -186,7 +186,8 @@ WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTH
 As Montvydas detailed, the Arduino Nano 33 BLE Sense (and Rev 2) contains [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) processing capabilities. To take advantage of this feature, I decided to use the communication protocol for the Drone's Joystick Control. As detailed in the [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) tutorial two Nano 33 BLE devices are used, one for the Host and one for the client. In this case, I decided for the Aruino Nano 33 BLE Sense to be the Host device in which a joystick(s) is hooked up to control the Drone's motorspeed as detailed by Ben Finio in his article [Drone Control with an Analog Joystick](https://www.sciencebuddies.org/stem-activities/drone-arduino-steering-joystick). The Client in this case is the Arduino Nano 33 BLE Sense Rev 2 that sends out the PWM pulses to the Drone's motors. The code for each device is located below:
 
 HOST/SERVER/CENTRAL DEVICE:
-[Central Device]((https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/central_joystick)
+
+[Central Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/central_joystick)
 
 ![]()
 
