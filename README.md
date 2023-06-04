@@ -179,7 +179,7 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 
 ### Programming the Flight Control System: 
 
-**Blootooth Communication and Joystick Control**
+**Bluetooth® Low Energy Communication and Joystick Control**
 
 WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTHER BLUETOOTH APPLICAATIONS!!! WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
 
