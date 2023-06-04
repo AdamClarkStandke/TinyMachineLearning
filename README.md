@@ -147,40 +147,55 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 
 ### Schematic and PCB layout:
 
+Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 Flight Controller. Basically follows the [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/) PCB Schematic only slight differences as mentioned above:
+
 **Schematic**
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-05-21.png)
 
-**Top View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/topview.png)
+[EasyEda](https://easyeda.com/) includes a great free feature of seeing what the completed PCB will look like once produced and assembeld, as shown below:
 
-**Bottom View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/bottomview.png)
+**CAD Top View**
+![]()
 
-Gerber file can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB5_2023-05-22.zip).
-BOM CSV can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/BOM_Board1_PCB5_2023-05-22%20(1).csv). 
+**CAD Bottom View**
+![]()
 
-### PCB Fabrication:
+**Gerber file**
 
-PCB Fabrication was done by [EasyEda](https://easyeda.com/) and was shipped within 2-3 business days (FAST!!!). The first two images are a top view and bottom view of the fabricated board and the third image is the pcb board with it being fit with the Arduino Nano 33 BLE Sense Rev2 Microcontroller. 
+[Gerber File]()
 
-**Top View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0342.jpg)
+**Bill of Materials**
 
-**Bottom View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0346.jpg)
+[BOM]()
 
-**Arduino Top View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0352.jpg)
+### PCB Fabrication and Assembly:
 
-### Construction:
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
+
+![]()
 
 ### Programming the Flight Control System: 
 
-**BLE Communication**
+**Blootooth Communication and Joystick Control**
 
-JoyStick Controller for the [Central Device](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/central_joystick.zip) 
+WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTHER BLUETOOTH APPLICAATIONS!!! WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
 
-Flight controller for the [Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/perp_motor_control.zip)
+As Montvydas detailed, the Arduino Nano 33 BLE Sense (and Rev 2) contains [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) processing capabilities. To take advantage of this feature, I decided to use the communication protocol for the Drone's Joystick Control. As detailed in the [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) tutorial two Nano 33 BLE devices are used, one for the Host and one for the client. In this case, I decided for the Aruino Nano 33 BLE Sense to be the Host device in which a joystick(s) is hooked up to control the Drone's motorspeed as detailed by Ben Finio in his article [Drone Control with an Analog Joystick](https://www.sciencebuddies.org/stem-activities/drone-arduino-steering-joystick). The Client in this case is the Arduino Nano 33 BLE Sense Rev 2 that sends out the PWM pulses to the Drone's motors. The code for each device is located below:
+
+HOST/SERVER/CENTRAL DEVICE:
+[Central Device]() 
+
+![]()
+
+CLIENT/PERIPHERAL DEVICE:
+
+[Peripheral Device]()
+
+**Velocity,Gyroscope and Altitude Control**
+
+**PID Controller**
+
+
 
 ### Testing and Resuslts:
 
