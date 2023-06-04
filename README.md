@@ -152,23 +152,24 @@ This project stems from Montvydas in which he developed an Arduino Nano Quadcopt
 Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 Flight Controller. Basically follows the [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/) PCB Schematic only slight differences as mentioned above:
 
 **Schematic**
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-06-04.png)
 
 [EasyEda](https://easyeda.com/) includes a great free feature of seeing what the completed PCB will look like once produced and assembeld, as shown below:
 
 **3D CAD Top View**
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/3D_PCB5_2023-06-04.png)
 
 **3D CAD Side View**
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/3D_PCB5_2023-06-04(1).png)
 
 **Gerber file and 3D Gerber CAD VIEW**
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/3D_PCB5_2023-06-04(2).png)
 
-[Gerber File]()
+[Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/Gerber_PCB5_2023-06-04.zip)
 
 **Bill of Materials Spreedsheet**
 
-[BOM]()
+[BOM](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/BOM_Board1_PCB5_2023-06-04.ods)
 
 ### PCB Fabrication and Assembly:
 
@@ -185,13 +186,13 @@ WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTH
 As Montvydas detailed, the Arduino Nano 33 BLE Sense (and Rev 2) contains [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) processing capabilities. To take advantage of this feature, I decided to use the communication protocol for the Drone's Joystick Control. As detailed in the [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) tutorial two Nano 33 BLE devices are used, one for the Host and one for the client. In this case, I decided for the Aruino Nano 33 BLE Sense to be the Host device in which a joystick(s) is hooked up to control the Drone's motorspeed as detailed by Ben Finio in his article [Drone Control with an Analog Joystick](https://www.sciencebuddies.org/stem-activities/drone-arduino-steering-joystick). The Client in this case is the Arduino Nano 33 BLE Sense Rev 2 that sends out the PWM pulses to the Drone's motors. The code for each device is located below:
 
 HOST/SERVER/CENTRAL DEVICE:
-[Central Device]() 
+[Central Device]((https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/central_joystick)
 
 ![]()
 
 CLIENT/PERIPHERAL DEVICE:
 
-[Peripheral Device]()
+[Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/perp_motor_control)
 
 **Velocity,Gyroscope and Altitude Control**
 
