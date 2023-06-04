@@ -143,6 +143,8 @@ Implementation of the person detection example as detailed by the [ArduCam Team]
 
 ## Project: Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
 
+WARNING!!! THIS PROJECT IS AN OPEN SOURCE HARDWARE PROJECT, SO WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
+
 This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and will incorporate the Nano 33 BLE Sense Rev2 for its AI capabilites using the [Arducam Mini Module 5MP Plus OV5642](https://www.amazon.com/dp/B013JUKZ48/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B013JUKZ48&pd_rd_w=ZOLHi&content-id=amzn1.sym.0d1092dc-81bb-493f-8769-d5c802257e94&pf_rd_p=0d1092dc-81bb-493f-8769-d5c802257e94&pf_rd_r=N4BZXPBP4T07WSD3WTVA&pd_rd_wg=ID8SA&pd_rd_r=286a49c2-6c11-459f-a6f0-a719a400a8db&s=industrial&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy) camera for scene classification and person detection purposes. Since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The only thing I added was a step-up voltage converter/booster for the lipo 3.7V+ battery that powers Nano 33 BLE Sense Rev2. The finished  schematic version and Pcb is shown below.
 
 ### Schematic and PCB layout:
@@ -154,17 +156,17 @@ Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 F
 
 [EasyEda](https://easyeda.com/) includes a great free feature of seeing what the completed PCB will look like once produced and assembeld, as shown below:
 
-**CAD Top View**
+**3D CAD Top View**
 ![]()
 
-**CAD Bottom View**
+**3D CAD Side View**
 ![]()
 
-**Gerber file**
+**Gerber file and 3D Gerber CAD VIEW**
 
 [Gerber File]()
 
-**Bill of Materials**
+**Bill of Materials Spreedsheet**
 
 [BOM]()
 
