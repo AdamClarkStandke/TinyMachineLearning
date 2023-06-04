@@ -176,6 +176,12 @@ PCB Fabrication was done by [EasyEda](https://easyeda.com/) and was shipped with
 
 ### Programming the Flight Control System: 
 
+**BLE Communication**
+
+JoyStick Controller for the [Central Device]() 
+
+Flight controller for the [Peripheral Device]()
+
 ### Testing and Resuslts:
 
 -------------------------------------------------------------------------------
