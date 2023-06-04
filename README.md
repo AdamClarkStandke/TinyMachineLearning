@@ -189,8 +189,6 @@ HOST/SERVER/CENTRAL DEVICE:
 
 [Central Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/central_joystick)
 
-![]()
-
 CLIENT/PERIPHERAL DEVICE:
 
 [Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/perp_motor_control)
