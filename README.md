@@ -175,7 +175,13 @@ Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 F
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 
-![]()
+**Top View**
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0366.jpg)
+
+**Side View**
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0368.jpg)
+
+**Current Setup**
 
 ### Programming the Flight Control System: 
 
