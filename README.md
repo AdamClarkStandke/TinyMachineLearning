@@ -181,7 +181,8 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 **Side View**
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0368.jpg)
 
-**Current Setup**
+**Test Bed for Programming the Flight Control System**
+![]()
 
 ### Programming the Flight Control System: 
 
