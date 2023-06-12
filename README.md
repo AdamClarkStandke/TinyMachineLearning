@@ -185,8 +185,13 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)
 
 ### Programming the Flight Control System: 
+READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
 
-**Bluetooth® Low Energy Communication and Joystick Control**
+**Basic/Generic: Motor Contoller**
+
+This is the code that needs to be uploaded to Arduino Nano 33 BLE Sense (and Rev 2) after constructing the Test Bed System to get the motors rotating: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control/motor_control.ino)
+
+**Advanced: Bluetooth® Low Energy Communication and Joystick Control**
 
 WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTHER BLUETOOTH APPLICAATIONS!!! WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
 
@@ -200,9 +205,12 @@ CLIENT/PERIPHERAL DEVICE:
 
 [Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/perp_motor_control)
 
-**Velocity,Gyroscope and Altitude Control**
+**Advanced: Velocity,Gyroscope and Altitude Control**
 
-**PID Controller**
+**Advanced: PID Controller**
+
+**Advanced: Motor Control based on Scene Classification & Object Detection**
+
 
 
 
