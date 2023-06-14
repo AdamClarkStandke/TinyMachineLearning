@@ -182,7 +182,7 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0368.jpg)
 
 **Test Bed for Programming the Flight Control System**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
 
 ### Programming the Flight Control System: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
