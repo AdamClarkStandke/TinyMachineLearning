@@ -173,13 +173,7 @@ Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 F
 
 ### PCB Fabrication and Assembly:
 
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
-
-**Top View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0366.jpg)
-
-**Side View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0368.jpg)
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone as shown below:
 
 **Test Bed for Programming the Flight Control System**
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
