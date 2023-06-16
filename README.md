@@ -185,7 +185,7 @@ READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/b
 
 This is the code that needs to be uploaded to Arduino Nano 33 BLE Sense (and Rev 2) after constructing the Test Bed System to get the motors rotating: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control/motor_control.ino)
 
-**Advanced: Bluetooth® Low Energy Communication and Joystick Control**
+**Basic: Bluetooth® Low Energy Communication and Joystick Control**
 
 WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTHER BLUETOOTH APPLICAATIONS!!! WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
 
@@ -199,12 +199,9 @@ CLIENT/PERIPHERAL DEVICE:
 
 [Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/perp_motor_control)
 
-**Advanced: Velocity,Gyroscope and Altitude Control**
+**Advanced: Neural Network Flight Controller**
 
-**Advanced: PID Controller**
-
-**Advanced: Motor Control based on Scene Classification & Object Detection**
-
+[ANN Flight Control System]()
 
 
 
