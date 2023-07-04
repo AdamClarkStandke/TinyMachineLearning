@@ -191,11 +191,11 @@ This is the updated version of the schematic--that is still a work in progress. 
 
 **3D CAD Top View**
 
-**3D CAD Side View**
-
 **Gerber file and 3D Gerber CAD VIEW**
 
 **Bill of Materials Spreedsheet**
+
+Same as old version, just without step-up voltage converter/booster module.
 
 **PCB Fabrication and Assembly**
 
