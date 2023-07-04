@@ -177,7 +177,7 @@ Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contain
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone as shown below:
 
-Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propellers-Replacement-Eachine-Inductrix-Quadcopter/dp/B079DP3V42) that would fit [716 Brushed Motors](https://www.aliexpress.us/item/3256801308414101.html?gatewayAdapt=glo2usa4itemAdapt). The drone frame is a [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1).
+Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propellers-Replacement-Eachine-Inductrix-Quadcopter/dp/B079DP3V42) that would fit [716 Brushed Motors](https://www.aliexpress.us/item/3256801308414101.html?gatewayAdapt=glo2usa4itemAdapt). The drone frame is from [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1) and the batteries are from [Sea Jump](https://www.amazon.com/sea-jump-Lithium-Quadcopter-Aircraft/dp/B07SLLVQ2Q/ref=sr_1_2?keywords=sea+jump&qid=1688439753&sr=8-2).
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
 
@@ -187,7 +187,7 @@ This is the updated version of the schematic--that is still a work in progress. 
 
 **Schematic**
 
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-07-03.png)
 
 **3D CAD Top View**
 
