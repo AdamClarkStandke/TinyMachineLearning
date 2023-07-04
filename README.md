@@ -177,8 +177,6 @@ Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contain
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone as shown below:
 
-**Test Bed for Programming the Flight Control System**
-
 Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propellers-Replacement-Eachine-Inductrix-Quadcopter/dp/B079DP3V42) that would fit [716 Brushed Motors](https://www.aliexpress.us/item/3256801308414101.html?gatewayAdapt=glo2usa4itemAdapt) 
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
@@ -189,9 +187,17 @@ This is the updated version of the schematic--that is still a work in progress. 
 
 **Schematic**
 
+![]()
+
 **3D CAD Top View**
 
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/3D_PCB8_2023-07-03.png)
+
 **Gerber file and 3D Gerber CAD VIEW**
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/3D_PCB8_2023-07-03%20(1).png)
+
+[Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB8_2023-07-03.zip)
 
 **Bill of Materials Spreedsheet**
 
@@ -199,7 +205,6 @@ Same as old version, just without step-up voltage converter/booster module.
 
 **PCB Fabrication and Assembly**
 
-**Test Bed for Programming the Flight Control System**
 
 ### Modeling:
 
