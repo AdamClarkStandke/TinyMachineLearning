@@ -143,13 +143,15 @@ Implementation of the person detection example as detailed by the [ArduCam Team]
 
 ## Project: Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
 
-WARNING!!! THIS PROJECT IS AN OPEN SOURCE HARDWARE PROJECT, SO WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
+WARNING!!! THIS PROJECT IS AN OPEN SOURCE HARDWARE PROJECT TAKE ALL PRECATIONS BEFORE ASSEMBLY SUCH AS MASK, GLOVES AND FIRE EXTINGUISHER. IN THAT REGARD READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) ALSO  BEFORE USING!!!!
 
-This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and will incorporate the Nano 33 BLE Sense Rev2 for its AI capabilites using the [Arducam Mini Module 5MP Plus OV5642](https://www.amazon.com/dp/B013JUKZ48/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B013JUKZ48&pd_rd_w=ZOLHi&content-id=amzn1.sym.0d1092dc-81bb-493f-8769-d5c802257e94&pf_rd_p=0d1092dc-81bb-493f-8769-d5c802257e94&pf_rd_r=N4BZXPBP4T07WSD3WTVA&pd_rd_wg=ID8SA&pd_rd_r=286a49c2-6c11-459f-a6f0-a719a400a8db&s=industrial&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy) camera for scene classification and person detection purposes. Since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The only thing I added was a step-up voltage converter/booster for the lipo 3.7V+ battery that powers Nano 33 BLE Sense Rev2. The finished  schematic version and Pcb is shown below.
+This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and will incorporate the Nano 33 BLE Sense Rev2 for its AI capabilites, namely I will be using the [TLFM](https://github.com/tensorflow/tflite-micro) library to train a [PPO agent](https://docs.ray.io/en/master/rllib/rllib-algorithms.html#ppo) to control the drone's flight system (i.e. its motors). 
 
-### Schematic and PCB layout:
+### Old Version: Schematic and PCB layout:
 
-Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 Flight Controller. Basically follows the [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/) PCB Schematic only slight differences as mentioned above:
+This was the first version of the PCB flight control system. Eventhough it works, there were certain design elements that needed to be modified, such as the jst connectors for the battery and how the nano was powered. Thus, this version should not be used for assembly but is here for documentation purposes only!! 
+  
+Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The only thing I added was a step-up voltage converter/booster for the lipo 3.7V+ battery that powers Nano 33 BLE Sense Rev2. The finished  schematic version and Pcb is shown below
 
 **Schematic**
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-06-04.png)
@@ -171,12 +173,15 @@ Below is the PCB Schematic that will house the Arduino Nano 33 BLE Sense Rev 2 F
 
 [BOM](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/BOM_Board1_PCB5_2023-06-04.ods)
 
-### PCB Fabrication and Assembly:
+**PCB Fabrication and Assembly**
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone as shown below:
 
 **Test Bed for Programming the Flight Control System**
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
+
+
+
 
 ### Programming the Flight Control System: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
