@@ -201,9 +201,7 @@ CLIENT/PERIPHERAL DEVICE:
 
 **Advanced: Neural Network Flight Controller**
 
-[ANN Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/DroneFlightController.zip)
-
-
+To take advantage of the machine learning capabilities of the Arduino Nano 33 BLE Sense Rev 2, I decided to use the reinforcement learning enviornment [Learning to Fly](https://arxiv.org/abs/2103.02142) to train a PPO reinforcement learning agent for controlling the drone's motors. Similar to this fun example![Duck Drone](https://www.youtube.com/watch?v=rbHqwHpZ_kU)
 
 ### Testing and Resuslts:
 
