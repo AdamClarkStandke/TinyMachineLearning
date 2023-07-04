@@ -147,7 +147,7 @@ WARNING!!! THIS PROJECT IS AN OPEN SOURCE HARDWARE PROJECT TAKE ALL PRECATIONS B
 
 This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and will incorporate the Nano 33 BLE Sense Rev2 for its AI capabilites, namely I will be using the [TLFM](https://github.com/tensorflow/tflite-micro) library to train a [PPO agent](https://docs.ray.io/en/master/rllib/rllib-algorithms.html#ppo) to control the drone's flight system (i.e. its motors). 
 
-### Old Version: Schematic and PCB layout:
+### (Old Version) Schematic and PCB layout:
 
 This was the first version of the PCB flight control system. Eventhough it works, there were certain design elements that needed to be modified, such as the jst connectors for the battery and how the nano was powered. Thus, this version should not be used for assembly but is here for documentation purposes only!! 
   
@@ -178,12 +178,30 @@ Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contain
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone as shown below:
 
 **Test Bed for Programming the Flight Control System**
+
+Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propellers-Replacement-Eachine-Inductrix-Quadcopter/dp/B079DP3V42) that would fit [716 Brushed Motors](https://www.aliexpress.us/item/3256801308414101.html?gatewayAdapt=glo2usa4itemAdapt) 
+
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
 
+### (New Version) Schematic and PCB layout:
 
+**Schematic**
 
+**3D CAD Top View**
 
-### Programming the Flight Control System: 
+**3D CAD Side View**
+
+**Gerber file and 3D Gerber CAD VIEW**
+
+**Bill of Materials Spreedsheet**
+
+**PCB Fabrication and Assembly**
+
+**Test Bed for Programming the Flight Control System**
+
+### Modeling:
+
+### Programming: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
 
 **Basic/Generic: Motor Contoller**
