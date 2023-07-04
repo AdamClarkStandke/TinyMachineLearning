@@ -185,6 +185,8 @@ Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propel
 
 ### (New Version) Schematic and PCB layout:
 
+This is the updated version of the schematic--that is still a work in progress. Unlike the old version, the new version does not have a step-up voltage converter/booster. Also the camera layout has been changed to integrate (fingers crossed) a [Wolfwhoop WT06 Micro AIO 600TVL Camera](https://www.amazon.com/Wolfwhoop-600TVL-Camera-Transmitter-Antenna/dp/B06VY7L1N4/ref=asc_df_B06VY7L1N4/?tag=hyprod-20&linkCode=df0&hvadid=647222099437&hvpos=&hvnetw=g&hvrand=7687682336458292318&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9006620&hvtargid=pla-1458319804946&gclid=CjwKCAjw44mlBhAQEiwAqP3eVuA56xiEOqQz-usnhdkRRYzCiu8g2hDIv2rGP2h5YuFzFXEjMHMy5RoCzkwQAvD_BwE&th=1) for video transmission. And for the PCB, I increased the trace width to 50 mil for the two battery sources and a seperate copper pour for the current powering the motor's.   
+
 **Schematic**
 
 **3D CAD Top View**
