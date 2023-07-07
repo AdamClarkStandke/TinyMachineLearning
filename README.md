@@ -205,6 +205,9 @@ Same as old version, just without step-up voltage converter/booster module.
 
 **PCB Fabrication and Assembly**
 
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
+
+![]()
 
 ### Modeling:
 
