@@ -211,6 +211,12 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 
 ### Modeling:
 
+For the drone frame, I decided to use the 95mm weelbase frame from [USAQ](https://www.amazon.com/QX95-Brushed-Racing-Quadcopter-Frame/dp/B08LTNT16B/ref=asc_df_B08LTNT16B/?tag=hyprod-20&linkCode=df0&hvadid=647363962209&hvpos=&hvnetw=g&hvrand=5681260871874349734&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9006620&hvtargid=pla-2161115067792&psc=1&gclid=CjwKCAjwzJmlBhBBEiwAEJyLuypXNVeizTEYKut4k5DIcBmoW73K6ttTfiu4gYklHUo_MqTt6zmK3RoCLiYQAvD_BwE)
+
+Because the drone frames available in [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/gym_pybullet_drones/assets) are different from the drone frame that I will be using I needed to model the drone frame (as best I could) in [blender](https://www.blender.org/). That way it could be simulated kind of accurately in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environmnet. 
+
+I then created a [urdf file](http://wiki.ros.org/urdf) to import the collada file I created in blender and used the defualt properties, joints, and links found in the other drone frames in learning to fly.  
+
 ### Programming: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
 
