@@ -217,7 +217,11 @@ Because the drone frames available in [learning to fly](https://github.com/utias
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)
 
+[Custom Drone](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/customDrone.dae)
+
 I then created a [urdf file](http://wiki.ros.org/urdf) to import the collada file I created in blender and used the defualt properties, joints, and links found in the other drone frames in learning to fly.  
+
+[RoboCain](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/droneOne.urdf)
 
 ### Programming: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
