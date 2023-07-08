@@ -31,11 +31,6 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 
 As bought and documented [here](https://www.adafruit.com/product/5526)
 
-## Book: Voice Controlling LEDS with Edge Impulse
-
-**Gathering Data, Training, Optimizing, & Testing Model**
-
-[![voice controlling leds](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Screenshot%20from%202023-03-04%2013-15-56.png)](https://studio.edgeimpulse.com/public/193428/latest/learning/keras/8)
 
 ## Book: Indoor Scene Classification
 
@@ -105,13 +100,6 @@ Ino Code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLear
 
 C-Byte Model can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/gestureDetection_classifier/model.h)
 
-## Project: Reading Temperature&Humidity Values over Bluetooth
-
-The blue box represents temperature and the red box represents humidity (room kinda hot lol)
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/homescreen.png)
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SensorReads.png)
 
 ## Project: Person Detection 
 
@@ -131,15 +119,12 @@ TFLM Person detection code can be found [here](https://github.com/AdamClarkStand
 
 And all the other files such as required headers can be found in this [directory](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/person_detection_OV2640Mini2MPlus) that need to be included in the sketch for it to run.[^2]
 
-## Rasperry Pi Pico W 
+### Rasperry Pi Pico W 
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0336(1).jpg)](https://www.youtube.com/watch?v=MaYkYJmJrqk)
 
 Implementation of the person detection example as detailed by the [ArduCam Team](https://github.com/ArduCAM/RPI-Pico-Cam)
 
-## LED Project: 24-LED NeoPixel
-
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ledRing.png)](https://youtu.be/hxCp7cTqXQk)
 
 ## Project: Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
 
@@ -215,13 +200,15 @@ For the drone frame, I decided to use the 95mm weelbase frame from [USAQ](https:
 
 Because the drone frames available in [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/gym_pybullet_drones/assets) are different from the drone frame that I will be using I needed to model the drone frame (as best I could) in [blender](https://www.blender.org/). That way it could be simulated kind of accurately in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environmnet. I used the [cf2.dae](https://github.com/utiasDSL/gym-pybullet-drones/blob/master/gym_pybullet_drones/assets/cf2.dae) as a template in regards to modeling the propellers:   
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)
-
 [Custom Drone](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/customDrone.dae)
 
 I then created a [urdf file](http://wiki.ros.org/urdf) to import the collada file I created in blender and used the defualt properties, joints, and links found in the other drone frames in learning to fly.  
 
 [RoboCain](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/droneOne.urdf)
+
+And the drone frame was able to be simulated in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environment as seen below:
+
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)
 
 ### Programming: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
@@ -246,7 +233,7 @@ CLIENT/PERIPHERAL DEVICE:
 
 **Advanced: Neural Network Flight Controller**
 
-To take advantage of the machine learning capabilities of the Arduino Nano 33 BLE Sense Rev 2, I decided to use the reinforcement learning enviornment [Learning to Fly](https://arxiv.org/abs/2103.02142) to train a PPO reinforcement learning agent for controlling the drone's motors. Similar to this fun example [Duck Drone](https://www.youtube.com/watch?v=rbHqwHpZ_kU)
+To take advantage of the machine learning capabilities of the Arduino Nano 33 BLE Sense Rev 2, I decided to use the reinforcement learning enviornment [Learning to Fly](https://arxiv.org/abs/2103.02142) to train a PPO reinforcement learning agent for controlling the drone's motors.
 
 ### Testing and Resuslts:
 
