@@ -105,7 +105,7 @@ C-Byte Model can be found [here](https://github.com/AdamClarkStandke/TinyMachine
 
 ### Arduino Nano 33 BLE Sense Rev2
 
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0328(1).jpg)](https://youtu.be/d5dRwel8NFQ)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0328(1).jpg)
 
 Implementation of the person detection example as detailed by the Official Tenserflow Repo as of Oct 9, 2019 and [anaferrez's implemenation](https://projecthub.arduino.cc/anaferraz/ee255f8f-ba55-4e0a-93b2-3d4d373e7c8d). In my code, for the Nano 33 BLE Sense Rev2 board, when a person is detected (within the model's degrees of confidence) onboard led turns RED; when a person is not detected (again within the model's degrees of confidence) onboard led turns GREEN; and all other times flashes BLUE. As seen from the video, inferencing is not super accurate but pretty good! The Nano 33 BLE Sense Rev2 board is connected to the [ArduCam OV2640 MINI 2MP-Plus](https://www.amazon.com/dp/B012UXNDOY?ref_=pe_386300_442746000_DDT_E_DDE_dt_1)
 
@@ -162,9 +162,9 @@ Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contain
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone as shown below:
 
-Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propellers-Replacement-Eachine-Inductrix-Quadcopter/dp/B079DP3V42) that would fit [716 Brushed Motors](https://www.aliexpress.us/item/3256801308414101.html?gatewayAdapt=glo2usa4itemAdapt). The drone frame is from [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1) and the batteries are from [Sea Jump](https://www.amazon.com/sea-jump-Lithium-Quadcopter-Aircraft/dp/B07SLLVQ2Q/ref=sr_1_2?keywords=sea+jump&qid=1688439753&sr=8-2).
-
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
+
+Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propellers-Replacement-Eachine-Inductrix-Quadcopter/dp/B079DP3V42) that would fit [716 Brushed Motors](https://www.aliexpress.us/item/3256801308414101.html?gatewayAdapt=glo2usa4itemAdapt). The drone frame is from [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1) and the batteries are from [Sea Jump](https://www.amazon.com/sea-jump-Lithium-Quadcopter-Aircraft/dp/B07SLLVQ2Q/ref=sr_1_2?keywords=sea+jump&qid=1688439753&sr=8-2).
 
 ### (New Version) Schematic and PCB layout:
 
@@ -190,9 +190,11 @@ Same as old version, just without step-up voltage converter/booster module.
 
 **PCB Fabrication and Assembly**
 
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone as shown below:
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0408.jpg)
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/top_view_testBed.jpg)
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/side_view_testBed.jpg)
 
 ### Modeling:
 
