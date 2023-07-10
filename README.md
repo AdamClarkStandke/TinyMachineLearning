@@ -160,7 +160,7 @@ Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contain
 
 **PCB Fabrication and Assembly**
 
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone as shown below:
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/). I created a test bed to program the drone to get the motors rotating up to a default speed of 150 rpm as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control/motor_control.ino) and seen in the video below:
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)](https://youtu.be/hVllpykUUsg)
 
@@ -168,7 +168,7 @@ Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propel
 
 ### (New Version) Schematic and PCB layout:
 
-This is the updated version of the schematic--that is still a work in progress. Unlike the old version, the new version does not have a step-up voltage converter/booster. Also the camera layout has been changed to integrate (fingers crossed) a [Wolfwhoop WT06 Micro AIO 600TVL Camera](https://www.amazon.com/Wolfwhoop-600TVL-Camera-Transmitter-Antenna/dp/B06VY7L1N4/ref=asc_df_B06VY7L1N4/?tag=hyprod-20&linkCode=df0&hvadid=647222099437&hvpos=&hvnetw=g&hvrand=7687682336458292318&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9006620&hvtargid=pla-1458319804946&gclid=CjwKCAjw44mlBhAQEiwAqP3eVuA56xiEOqQz-usnhdkRRYzCiu8g2hDIv2rGP2h5YuFzFXEjMHMy5RoCzkwQAvD_BwE&th=1) for video transmission. And for the PCB, I increased the trace width to 50 mil for the two battery sources and a seperate copper pour for the current powering the motor's.   
+This is the updated version of the schematic--that is still a work in progress. Unlike the old version, the new version does not have a step-up voltage converter/booster. And for the PCB, I increased the trace width to 50 mil for the two battery sources and a seperate copper pour for the current powering the motor's.   
 
 **Schematic**
 
@@ -190,15 +190,15 @@ Same as old version, just without step-up voltage converter/booster module.
 
 **PCB Fabrication and Assembly**
 
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone as shown below:
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 150 rpm as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control/motor_control.ino) and seen in the video below:
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/top_view_testBed.jpg)](https://www.youtube.com/shorts/aawXR8qJVKw)
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/side_view_testBed.jpg)
+As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works!! With a default/max speed of 150 rpms the drone does not take off (the max speed is 255 rpms, which you change in the code above; I will be testing this speed at a later date which hopefully will make a difference, fingers crossed). Because of the way I set up the test bed I had to use two different propeller configurations; namely, in the rear of the drone I am using 75mm propellers and in the front of the drone I am using 55mm propellers (which you should not do, and I will fix at a later date when I have time???, since the thrust dynamics are completely off). 
 
 ### Modeling:
 
-For the drone frame, I decided to use the 95mm weelbase frame from [USAQ](https://www.amazon.com/QX95-Brushed-Racing-Quadcopter-Frame/dp/B08LTNT16B/ref=asc_df_B08LTNT16B/?tag=hyprod-20&linkCode=df0&hvadid=647363962209&hvpos=&hvnetw=g&hvrand=5681260871874349734&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9006620&hvtargid=pla-2161115067792&psc=1&gclid=CjwKCAjwzJmlBhBBEiwAEJyLuypXNVeizTEYKut4k5DIcBmoW73K6ttTfiu4gYklHUo_MqTt6zmK3RoCLiYQAvD_BwE)
+For the drone frame, I decided to use the 95mm weelbase frame from [USAQ](https://www.amazon.com/QX95-Brushed-Racing-Quadcopter-Frame/dp/B08LTNT16B/ref=asc_df_B08LTNT16B/?tag=hyprod-20&linkCode=df0&hvadid=647363962209&hvpos=&hvnetw=g&hvrand=5681260871874349734&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9006620&hvtargid=pla-2161115067792&psc=1&gclid=CjwKCAjwzJmlBhBBEiwAEJyLuypXNVeizTEYKut4k5DIcBmoW73K6ttTfiu4gYklHUo_MqTt6zmK3RoCLiYQAvD_BwE) (but to be continued....when I have time???)
 
 Because the drone frames available in [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/gym_pybullet_drones/assets) are different from the drone frame that I will be using I needed to model the drone frame (as best I could) in [blender](https://www.blender.org/). That way it could be simulated kind of accurately in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environmnet. I used the [cf2.dae](https://github.com/utiasDSL/gym-pybullet-drones/blob/master/gym_pybullet_drones/assets/cf2.dae) as a template in regards to modeling the propellers:   
 
@@ -212,14 +212,10 @@ And the drone frame was able to be simulated in the [learning to fly](https://gi
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)
 
-### Programming: 
+### Programming Joystick Controller and Neural Network Flight System using StableBaselines: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
 
-**Basic/Generic: Motor Contoller**
-
-This is the code that needs to be uploaded to Arduino Nano 33 BLE Sense (and Rev 2) after constructing the Test Bed System to get the motors rotating: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control/motor_control.ino)
-
-**Basic/Generic: Bluetooth® Low Energy Joystick Controller**
+**Bluetooth® Low Energy Joystick Controller**
 
 WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTHER BLUETOOTH APPLICAATIONS!!! WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
 
@@ -233,7 +229,7 @@ CLIENT/PERIPHERAL DEVICE:
 
 [Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/perp_motor_control)
 
-**Advanced: Neural Network Flight Controller**
+**Neural Network Flight Controller**
 
 To take advantage of the machine learning capabilities of the Arduino Nano 33 BLE Sense Rev 2, I decided to use the reinforcement learning enviornment [Learning to Fly](https://arxiv.org/abs/2103.02142) to train a PPO reinforcement learning agent for controlling the drone's motors.
 
