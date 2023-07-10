@@ -192,7 +192,7 @@ Same as old version, just without step-up voltage converter/booster module.
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone as shown below:
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/top_view_testBed.jpg)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/top_view_testBed.jpg)](https://www.youtube.com/shorts/aawXR8qJVKw)
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/side_view_testBed.jpg)
 
