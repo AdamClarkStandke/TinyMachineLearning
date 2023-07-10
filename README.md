@@ -192,9 +192,9 @@ Same as old version, just without step-up voltage converter/booster module.
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 150 rpm as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control/motor_control.ino) and seen in the video below:
 
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/top_view_testBed.jpg)](https://www.youtube.com/shorts/aawXR8qJVKw)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/testbed_v2_longFrame.jpg)](https://www.youtube.com/shorts/aawXR8qJVKw)
 
-As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works!! With a default/max speed of 150 rpms the drone does not take off (the max speed is 255 rpms, which you change in the code above; I will be testing this speed at a later date which hopefully will make a difference, fingers crossed). Because of the way I set up the test bed I had to use two different propeller configurations; namely, in the rear of the drone I am using 75mm propellers and in the front of the drone I am using 55mm propellers (which you should not do, and I will fix at a later date when I have time???, since the thrust dynamics are completely off). 
+As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works!! With a default/max speed of 150 rpms the drone does not take off (the max speed is 255 rpms, which you change in the code above; I will be testing this speed at a later date which hopefully will make a difference, fingers crossed given that current test bed config weights approx. [60 grams](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/weight.jpg)). Because of the way I set up the test bed I had to use two different propeller configurations; namely, in the rear of the drone I am using 75mm propellers and in the front of the drone I am using 55mm propellers (which you should not do, and I will fix at a later date when I have time???, since the thrust dynamics are completely off). 
 
 ### Modeling:
 
@@ -208,11 +208,11 @@ I then created a [urdf file](http://wiki.ros.org/urdf) to import the collada fil
 
 [RoboCain](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/droneOne.urdf)
 
-And the drone frame was able to be simulated in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environment as seen below:
+And the drone frame was able to be simulated in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environment as seen below in the fly.py example:
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)
 
-### Programming Joystick Controller and Neural Network Flight System using StableBaselines: 
+### Programming Joystick Controller and ANN Flight System using StableBaselines: 
 READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
 
 **Bluetooth® Low Energy Joystick Controller**
