@@ -190,9 +190,9 @@ Same as old version, just without step-up voltage converter/booster module.
 
 **PCB Fabrication and Assembly**
 
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino). The video below is running at a default speed of 150 rpm/PWMs, unlike the code:
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino). The video below is running at a default speed of 255 rpm/PWMs, unlike the code:
 
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0420.jpg)](https://youtube.com/shorts/7vTelSjgf7o?feature=share)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0426.jpg)](https://youtube.com/shorts/7vTelSjgf7o?feature=share)
 
 As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works!! The current test bed  weighs approx. [60 grams](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/weight.jpg)). I am using [crazepony motors](https://www.amazon.com/Crazepony-4pcs-6x15mm-Motor-Speed/dp/B01M4QRVA1/ref=d_pd_sbs_sccl_4_2/146-0323629-2882043?pd_rd_w=4nrj8&content-id=amzn1.sym.979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_p=979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_r=9P9HVYWG6SGQQ5TKRNGA&pd_rd_wg=evypx&pd_rd_r=eab316bf-2237-4715-972e-642af09fbea6&pd_rd_i=B01M4QRVA1&psc=1) and  55mm propellers. As the video shows, the drone still has trouble taking off. Some solutions that I am probably going to try are getting larger propellers and getting more powerful motors. Hopefully that will make a difference! (or back to the drawing board :)   
 
