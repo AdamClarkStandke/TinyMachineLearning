@@ -164,7 +164,7 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I creat
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)
 
-Unlike the photo, the video uses [31mm Propellers](https://www.amazon.com/Propellers-Replacement-Eachine-Inductrix-Quadcopter/dp/B079DP3V42) that would fit [716 Brushed Motors](https://www.aliexpress.us/item/3256801308414101.html?gatewayAdapt=glo2usa4itemAdapt). The drone frame is from [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1) and the batteries are from [Sea Jump](https://www.amazon.com/sea-jump-Lithium-Quadcopter-Aircraft/dp/B07SLLVQ2Q/ref=sr_1_2?keywords=sea+jump&qid=1688439753&sr=8-2).
+The drone frame is from [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1) and the batteries are from [Sea Jump](https://www.amazon.com/sea-jump-Lithium-Quadcopter-Aircraft/dp/B07SLLVQ2Q/ref=sr_1_2?keywords=sea+jump&qid=1688439753&sr=8-2).
 
 ### (New Version) Schematic and PCB layout:
 
@@ -192,15 +192,15 @@ Same as old version, just without step-up voltage converter/booster module.
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino). The video below is running at a default speed of 255 rpm/PWMs, unlike the [code](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino)
 
-The drone frame is the 3d printed frame created by Montvydas for his drone project, becuase the wheelbase dimensions are over 100mm, there more than enough room for 70mm propellers (which I will try out to see if this makes a difference) 
+The drone frame is the 3d printed frame created by Montvydas for his drone project, becuase the wheelbase dimensions are over 100mm, there more than enough room for 70mm propellers (which I will try out to see if this makes a difference lol) 
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0430.jpg)
 
 The video below shows the drone test bed in action
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0436.jpg)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0440.jpg)]()
 
-As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works!! The current test bed  weighs approx.. I am using [crazepony motors](https://www.amazon.com/Crazepony-4pcs-6x15mm-Motor-Speed/dp/B01M4QRVA1/ref=d_pd_sbs_sccl_4_2/146-0323629-2882043?pd_rd_w=4nrj8&content-id=amzn1.sym.979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_p=979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_r=9P9HVYWG6SGQQ5TKRNGA&pd_rd_wg=evypx&pd_rd_r=eab316bf-2237-4715-972e-642af09fbea6&pd_rd_i=B01M4QRVA1&psc=1) and  55mm propellers. As the video shows, the drone still has trouble taking off. Some solutions that I am probably going to try are getting larger propellers and getting more powerful motors. Hopefully that will make a difference! (or back to the drawing board :) lol   
+As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works!! The current test bed  weighs approx [88 grams](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0439.jpg) I am using [crazepony motors](https://www.amazon.com/Crazepony-4pcs-6x15mm-Motor-Speed/dp/B01M4QRVA1/ref=d_pd_sbs_sccl_4_2/146-0323629-2882043?pd_rd_w=4nrj8&content-id=amzn1.sym.979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_p=979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_r=9P9HVYWG6SGQQ5TKRNGA&pd_rd_wg=evypx&pd_rd_r=eab316bf-2237-4715-972e-642af09fbea6&pd_rd_i=B01M4QRVA1&psc=1) and  55mm propellers. As the video shows, the drone still has trouble taking off. Some solutions that I am probably going to try are getting larger propellers and getting more powerful motors. Hopefully that will make a difference! (or back to the drawing board :) lol   
 
 ### Modeling:
 
