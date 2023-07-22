@@ -160,7 +160,7 @@ Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contain
 
 **PCB Fabrication and Assembly**
 
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino).The video below is running at a default speed of 150 rpm/PWMs, unlike the code:
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino).The video below is running at a default speed of 150 rpm/PWMs, unlike the [code](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino)
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)
 
@@ -190,7 +190,7 @@ Same as old version, just without step-up voltage converter/booster module.
 
 **PCB Fabrication and Assembly**
 
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino). The video below is running at a default speed of 255 rpm/PWMs, unlike the code:
+PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino). The video below is running at a default speed of 255 rpm/PWMs, unlike the [code](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino)
 
 The drone frame is the 3d printed frame created by Montvydas for his drone project, becuase the wheelbase dimensions are over 100mm, there more than enough room for 70mm propellers (which I will try out to see if this makes a difference) 
 
