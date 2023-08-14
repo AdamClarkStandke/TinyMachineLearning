@@ -132,7 +132,7 @@ WARNING!!! THIS PROJECT IS AN OPEN SOURCE HARDWARE PROJECT TAKE ALL PRECATIONS B
 
 This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and will incorporate the Nano 33 BLE Sense Rev2 for its AI capabilites, namely I will be using the [TLFM](https://github.com/tensorflow/tflite-micro) library to train a [PPO agent](https://docs.ray.io/en/master/rllib/rllib-algorithms.html#ppo) to control the drone's flight system (i.e. its motors). 
 
-### (Old Version) Schematic and PCB layout:
+### (Old Version 1) Schematic and PCB layout:
 
 This was the first version of the PCB flight control system. Eventhough it works, there were certain design elements that needed to be modified, such as the jst connectors for the battery and how the nano was powered. Thus, this version should not be used for assembly but is here for documentation purposes only!! 
   
@@ -166,9 +166,10 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I creat
 
 The drone frame is from [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1) and the batteries are from [Sea Jump](https://www.amazon.com/sea-jump-Lithium-Quadcopter-Aircraft/dp/B07SLLVQ2Q/ref=sr_1_2?keywords=sea+jump&qid=1688439753&sr=8-2).
 
-### (New Version) Schematic and PCB layout:
+### (Old Version 2) Schematic and PCB layout:
 
-This is the updated version of the schematic--that is still a work in progress. Unlike the old version, the new version does not have a step-up voltage converter/booster. And for the PCB, I increased the trace width to 50 mil for the two battery sources and a seperate copper pour for the current powering the motor's.   
+This is another old version of the schematic--that is still a work in progress. Unlike old version 1, this version does not have a step-up voltage converter/booster. And for the PCB, I increased the trace width to 50 mil for the two battery sources and a seperate copper pour for the current powering the motor's. Because of design mistakes, this version should not be used for assembly but is here for documentation purposes only!! 
+    
 
 **Schematic**
 
@@ -200,7 +201,13 @@ The video below shows the drone test bed in action
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0440.jpg)](https://youtube.com/shorts/05N-mQAQjKc?feature=share )
 
-As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works!! The current test bed  weighs approx [88 grams](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0439.jpg) I am using [crazepony motors](https://www.amazon.com/Crazepony-4pcs-6x15mm-Motor-Speed/dp/B01M4QRVA1/ref=d_pd_sbs_sccl_4_2/146-0323629-2882043?pd_rd_w=4nrj8&content-id=amzn1.sym.979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_p=979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_r=9P9HVYWG6SGQQ5TKRNGA&pd_rd_wg=evypx&pd_rd_r=eab316bf-2237-4715-972e-642af09fbea6&pd_rd_i=B01M4QRVA1&psc=1) and  55mm propellers. As the video shows, the drone still has trouble taking off. Some solutions that I am probably going to try are getting larger propellers and getting more powerful motors. Hopefully that will make a difference! (or back to the drawing board :) lol   
+As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works (probably due to cutting the solder jumper).  The current test bed  weighs approx [88 grams](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0439.jpg) I am using [crazepony motors](https://www.amazon.com/Crazepony-4pcs-6x15mm-Motor-Speed/dp/B01M4QRVA1/ref=d_pd_sbs_sccl_4_2/146-0323629-2882043?pd_rd_w=4nrj8&content-id=amzn1.sym.979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_p=979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_r=9P9HVYWG6SGQQ5TKRNGA&pd_rd_wg=evypx&pd_rd_r=eab316bf-2237-4715-972e-642af09fbea6&pd_rd_i=B01M4QRVA1&psc=1) and  55mm propellers. As the video shows, the drone still has trouble taking off. Some solutions that I am probably going to try are getting larger propellers and getting more powerful motors. Hopefully that will make a difference! (or back to the drawing board :) lol  
+
+### (New Version) Schematic and PCB layout:
+
+This version of the schematic comes from the book [Teach an Arduino to Fly by David McGriffy](https://www.makershed.com/products/make-drones-pdf) in the book David uses the [Teensy 3.1](https://www.pjrc.com/teensy/teensy31.html) board and the add-in for the Arduino IDE to program the flight controller, I just switched the board and removed the  components that are not necessary for the Nano BLE 33 Rev 2.
+
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/arduinoDrone_schem.png)
 
 ### Modeling:
 
