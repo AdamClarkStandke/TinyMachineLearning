@@ -207,7 +207,15 @@ As you can see in the video the connector that is supposed to power up the Ard b
 
 This version of the schematic comes from the book [Teach an Arduino to Fly by David McGriffy](https://www.makershed.com/products/make-drones-pdf) in the book David uses the [Teensy 3.1](https://www.pjrc.com/teensy/teensy31.html) board and the add-in for the Arduino IDE to program the flight controller, I just switched the board and removed the  components that are not necessary for the Nano BLE 33 Rev 2.
 
+**Schematic**
+
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/arduinoDrone_schem.png)
+
+**Gerber file and 3D Gerber CAD VIEW**
+
+![]()
+
+[Gerber File]()
 
 ### Modeling:
 
