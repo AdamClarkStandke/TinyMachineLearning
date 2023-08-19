@@ -213,9 +213,9 @@ This version of the schematic comes from the book [Teach an Arduino to Fly by Da
 
 **Gerber file and 3D Gerber CAD VIEW**
 
-![]()
+![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/3D_PCB_PCB_ArudinoDrone_2023-08-19_2023-08-19.png)
 
-[Gerber File]()
+[Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB_PCB_ArudinoDrone_2023-08-19_2023-08-19.zip)
 
 ### Modeling:
 
