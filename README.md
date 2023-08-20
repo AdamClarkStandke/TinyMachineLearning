@@ -205,7 +205,7 @@ As you can see in the video the connector that is supposed to power up the Ard b
 
 ### (New Version) Schematic and PCB layout:
 
-This version of the schematic comes from the book [Teach an Arduino to Fly by David McGriffy](https://www.makershed.com/products/make-drones-pdf) in the book David uses the [Teensy 3.1](https://www.pjrc.com/teensy/teensy31.html) board and the add-in for the Arduino IDE to program the flight controller, I just switched the board and removed the  components that are not necessary for the Nano BLE 33 Rev 2.
+This version of the schematic comes from the book [Teach an Arduino to Fly by David McGriffy](https://www.makershed.com/products/make-drones-pdf) in the book David uses the [Teensy 3.1](https://www.pjrc.com/teensy/teensy31.html) board and the add-in for the Arduino IDE to program the flight controller, I just switched the board and removed the  components that are not necessary for the Nano BLE 33 Rev 2. This design uses only one 3.7V 650mAh battery rather then the two that I used in the previous two designs. This should help with the weight issues I was having. To make this design work you need to buy a voltage regulator/booster (similar to the one I designed in Old Version 1) except in this design I bought a tried and tested booster (rather than design my own like I did in Old Version 1); in particular I bought [Matek VB2A5V 3-4.2V to 5V Voltage Booster ](https://www.racedayquads.com/products/matek-vb2a5-1s-lipo-to-5v-voltage-booster?currency=USD&variant=31467728207985&gclid=Cj0KCQjw0IGnBhDUARIsAMwFDLnRW7vPnVI_kPZZ07VLbTDB3pQNJlU3sNtUL8EGRetb_AuOmo7wnHUaAl3fEALw_wcB). Basically, the genius of David's design is that a 3.7v battery can be used to power the Arduino, motors, and other components. The battery's 3.7-4.2 variable discharge rate will power the motors, while the regulated 5v output  will power the Arduino through its vin pin and the auxiliary components (i.e a camera). The Arduino's 3v3 pin will power the [Lemon RX reciever](https://lemon-rx.com/index.php?route=product/product&product_id=263) to be controlled by the [Blade MLP4DSM 4Ch Controller](https://www.horizonhobby.com/product/mlp4dsm-4ch-transmitter-2.4ghz-bmcx2120sr/EFLH1064B.html?gclid=Cj0KCQjw0IGnBhDUARIsAMwFDLnIMOxdLQWNxmZvSB9TNVZfrrQnBrdQ40ycnGwFcJZ92rF96O86bkgaAlpqEALw_wcB) I will be using the drone frame from  David's book and modify David's code as found at [The visible drone](http://www.makedronesbook.com/projects/VizDrone). Get David's book to fully understand this Drone/flight control game, G!!! (highly recommend). 
 
 **Schematic**
 
@@ -215,7 +215,9 @@ This version of the schematic comes from the book [Teach an Arduino to Fly by Da
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/3D_PCB_PCB_ArudinoDrone_2023-08-19_2023-08-19.png)
 
-[Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB_PCB_ArudinoDrone_2023-08-19_2023-08-19.zip)
+[Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB_PCB_ArudinoDrone_2023-08-19_2023-08-20.zip)
+
+
 
 ### Modeling:
 
