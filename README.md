@@ -223,9 +223,7 @@ This version of the schematic comes from the book [Teach an Arduino to Fly by Da
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone as shown in the photos below. The drone frame is a [Syma X5C Frame](https://www.amazon.com/Syma-Channel-2-4GHz-Explorers-Copter/dp/B00MNG37C2/ref=asc_df_B00MNG37C2/?tag=hyprod-20&linkCode=df0&hvadid=312184153387&hvpos=&hvnetw=g&hvrand=2952487919274782735&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9006587&hvtargid=pla-587640326317&psc=1) 
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0478.jpg)
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0480.jpg)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0478.jpg)](https://youtu.be/VT2iOiBPnwo)
 
 
 ### Modeling:
@@ -242,26 +240,11 @@ And the drone frame was able to be simulated in the [learning to fly](https://gi
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)
 
-### Programming Joystick Controller and ANN Flight System using StableBaselines: 
-READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE GOING FURTHER!!!!
 
-**Bluetooth® Low Energy Joystick Controller**
-
-WARNING!!! THIS CODE CONTAINS BLUETOOTH COMMUNICATION AND MAY INTERFERE WITH OTHER BLUETOOTH APPLICAATIONS!!! WARNINIG!!! READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) BEFORE USING!!!!
-
-As Montvydas detailed, the Arduino Nano 33 BLE Sense (and Rev 2) contains [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) processing capabilities. To take advantage of this feature, I decided to use the communication protocol for the Drone's Joystick Control. As detailed in the [Bluetooth® Low Energy](https://docs.arduino.cc/tutorials/nano-33-ble-sense/ble-device-to-device) tutorial two Nano 33 BLE devices are used, one for the Host and one for the client. In this case, I decided for the Aruino Nano 33 BLE Sense to be the Host device in which a joystick(s) is hooked up to control the Drone's motorspeed as detailed by Ben Finio in his article [Drone Control with an Analog Joystick](https://www.sciencebuddies.org/stem-activities/drone-arduino-steering-joystick). The Client in this case is the Arduino Nano 33 BLE Sense Rev 2 that sends out the PWM pulses to the Drone's motors. The code for each device is located below:
-
-HOST/SERVER/CENTRAL DEVICE:
-
-[Central Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/central_joystick)
-
-CLIENT/PERIPHERAL DEVICE:
-
-[Peripheral Device](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/Drone/Software/perp_motor_control)
 
 **Neural Network Flight Controller**
 
-To take advantage of the machine learning capabilities of the Arduino Nano 33 BLE Sense Rev 2, I decided to use the reinforcement learning enviornment [Learning to Fly](https://arxiv.org/abs/2103.02142) to train a PPO reinforcement learning agent for controlling the drone's motors.
+To take advantage of the machine learning capabilities of the Arduino Nano 33 BLE Sense Rev 2, I decided to use the reinforcement learning enviornment [Learning to Fly](https://arxiv.org/abs/2103.02142) to train a PPO reinforcement learning agent for controlling the drone's motors to take off.
 
 ### Testing and Resuslts:
 
