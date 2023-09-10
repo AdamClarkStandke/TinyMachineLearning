@@ -1,6 +1,6 @@
 # TinyMachineLearning
 
-Developing Embedded Applications that for the most part deal with machine learning as detailedfrom the book TinyML Cookbook by Gian Iodice &amp; Ronan Naughton. 
+Developing Embedded Applications that for the most part deal with machine learning as detailedfrom the book Tin yML Cookbook by Gian Iodice &amp; Ronan Naughton. 
 
 Tiny machine learning is broadly defined as a fast growing field of machine learning technologies and applications including hardware (dedicated integrated circuits), algorithms and software capable of performing on-device sensor (vision, audio, IMU, biomedical, etc.) data analytics at extremely low power, typically in the mW range and below, and hence enabling a variety of always-on use-cases and targeting battery operated devices.[^1]
 
