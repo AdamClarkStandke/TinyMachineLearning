@@ -1,10 +1,13 @@
 # TinyMachineLearning
 
-Developing Embedded Applications that for the most part deal with machine learning as detailedfrom the book TinyML Cookbook by Gian Iodice &amp; Ronan Naughton. 
+Developing Embedded Applications that for the most part deal with machine learning as detailed from the following books and tutorials:
 
-Tiny machine learning is broadly defined as a fast growing field of machine learning technologies and applications including hardware (dedicated integrated circuits), algorithms and software capable of performing on-device sensor (vision, audio, IMU, biomedical, etc.) data analytics at extremely low power, typically in the mW range and below, and hence enabling a variety of always-on use-cases and targeting battery operated devices.[^1]
+*[TinyML Cookbook by Gian Iodice](https://www.packtpub.com/product/tinyml-cookbook/9781801814973)
+*[Teach an Arduino to Fly by David McGriffy](https://www.makershed.com/products/make-drones-pdf)
 
-This repository will implement most of the chapters from the book [TinyML Cookbook](https://www.amazon.com/TinyML-Cookbook-artificial-intelligence-ultra-low-power/dp/180181497X) by Gian Iodice &amp; Ronan Naughton. And will implement other interesting applications related to the Arduino Nano 33 BLE Sense Rev2!
+As Gian details Tiny machine learning is broadly defined as a fast growing field of machine learning technologies and applications including hardware (dedicated integrated circuits), algorithms and software capable of performing on-device sensor (vision, audio, IMU, biomedical, etc.) data analytics at extremely low power, typically in the mW range and below, and hence enabling a variety of always-on use-cases and targeting battery operated devices.[^1]
+
+This Branch contains the most updated code and hardware designs. The branch old_documentation contains older code/designs and applications that do not fit with the main repo. 
 
 ## MicroController Boards
 
@@ -31,22 +34,7 @@ As bought and documented [here](https://store-usa.arduino.cc/products/nano-33-bl
 
 As bought and documented [here](https://www.adafruit.com/product/5526)
 
-
-## Book: Indoor Scene Classification
-
-**Camera Setup**
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0312.jpg)
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0315.jpg)
-
-
-**Scene Classification**
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmp70nqe3ui.PNG)
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmpcw8zqjn7.PNG)
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/tmpehal6xl2.PNG)
-
-## Project: Get Started With Machine Learning on Arduino
+## Project: Gesture Sense Emmoji Keyboard
 
 Implementation of [Get Started With Machine Learning on Arduino](https://docs.arduino.cc/tutorials/nano-33-ble-sense-rev2/get-started-with-machine-learning#capturing-gesture-training-data) by Sandeep Mistry and Dominic Pajak. A gesture classifier is created to play Street Fighter as detailed by Charlie Gerard in [Play Street Fighter with body movements using Arduino and Tensorflow.js](https://medium.com/@devdevcharlie/play-street-fighter-with-body-movements-using-arduino-and-tensorflow-js-6b0e4734e118). Full implementation can be found [here](https://github.com/arduino/AIoT-Dev-Summit-2019)
 
@@ -92,118 +80,23 @@ with the following model and trainable paramaters:
 | Dense | 15| 765|
 | Dense | 2| 32|
 
-### Gesture Sense Emmoji Keyboard
-
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/streetfighter.png)](https://youtu.be/awRqHDJUKUs)
 
 Ino Code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/gestureDetection_classifier/gestureDetection_classifier.ino)
 
 C-Byte Model can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/gestureDetection_classifier/model.h)
 
-
-## Project: Person Detection 
-
-### Arduino Nano 33 BLE Sense Rev2
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0328(1).jpg)
-
-Implementation of the person detection example as detailed by the Official Tenserflow Repo as of Oct 9, 2019 and [anaferrez's implemenation](https://projecthub.arduino.cc/anaferraz/ee255f8f-ba55-4e0a-93b2-3d4d373e7c8d). In my code, for the Nano 33 BLE Sense Rev2 board, when a person is detected (within the model's degrees of confidence) onboard led turns RED; when a person is not detected (again within the model's degrees of confidence) onboard led turns GREEN; and all other times flashes BLUE. As seen from the video, inferencing is not super accurate but pretty good! The Nano 33 BLE Sense Rev2 board is connected to the [ArduCam OV2640 MINI 2MP-Plus](https://www.amazon.com/dp/B012UXNDOY?ref_=pe_386300_442746000_DDT_E_DDE_dt_1)
-
-Ino Code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/person_detection_OV2640Mini2MPlus.ino)
-
-C-Byte Model can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/person_detect_model_data.cpp)
-
-TFLM Image Processing code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/image_provider.cpp)
-
-TFLM Person detection code can be found [here](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/person_detection_OV2640Mini2MPlus/detection_responder.cpp)
-
-And all the other files such as required headers can be found in this [directory](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/person_detection_OV2640Mini2MPlus) that need to be included in the sketch for it to run.[^2]
-
-### Rasperry Pi Pico W 
-
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0336(1).jpg)](https://www.youtube.com/watch?v=MaYkYJmJrqk)
+## Project: Person Detection with Rasperry Pi Pico W
 
 Implementation of the person detection example as detailed by the [ArduCam Team](https://github.com/ArduCAM/RPI-Pico-Cam)
 
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0336(1).jpg)](https://www.youtube.com/watch?v=MaYkYJmJrqk)
 
-## Project: Drone Flight Controller using the Arduino Nano 33 BLE Sense Rev2
+## Project: Drone Flight Control System using the Arduino Nano 33 BLE Sense Rev2 Board 
 
 WARNING!!! THIS PROJECT IS AN OPEN SOURCE HARDWARE PROJECT TAKE ALL PRECATIONS BEFORE ASSEMBLY SUCH AS MASK, GLOVES AND FIRE EXTINGUISHER. IN THAT REGARD READ THE [MIT LICENSE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/LICENSE) ALSO  BEFORE USING!!!!
 
-This project stems from Montvydas in which he developed an Arduino Nano Quadcopted as found here: [Arduino Nano Quadcopter](https://www.instructables.com/Arduino-micro-Quadcopter/). I wanted to design my own flight controller system using the same prinicples from Montvydas Project. This project uses the Arduino Nano 33 BLE Sense Rev2 as the main contoller and will incorporate the Nano 33 BLE Sense Rev2 for its AI capabilites, namely I will be using the [TLFM](https://github.com/tensorflow/tflite-micro) library to train a [PPO agent](https://docs.ray.io/en/master/rllib/rllib-algorithms.html#ppo) to control the drone's flight system (i.e. its motors). 
-
-### (Old Version 1) Schematic and PCB layout:
-
-This was the first version of the PCB flight control system. Eventhough it works, there were certain design elements that needed to be modified, such as the jst connectors for the battery and how the nano was powered. Thus, this version should not be used for assembly but is here for documentation purposes only!! 
-  
-Similar to Version two, since the Arduino Nano 33 BLE Sense Rev2 already contains a built in IMU unit, Pressure sensor, and Bluetooth, alot of the modules found in  Montvydas Project have been removed. The only thing I added was a step-up voltage converter/booster for the lipo 3.7V+ battery that powers Nano 33 BLE Sense Rev2. The finished  schematic version and Pcb is shown below
-
-**Schematic**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-06-04.png)
-
-[EasyEda](https://easyeda.com/) includes a great free feature of seeing what the completed PCB will look like once produced and assembeld, as shown below:
-
-**3D CAD Top View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/3D_PCB5_2023-06-04.png)
-
-**3D CAD Side View**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/3D_PCB5_2023-06-04(1).png)
-
-**Gerber file and 3D Gerber CAD VIEW**
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/3D_PCB5_2023-06-04(2).png)
-
-[Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/Gerber_PCB5_2023-06-04.zip)
-
-**Bill of Materials Spreedsheet**
-
-[BOM](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Drone/Hardware/BOM_Board1_PCB5_2023-06-04.ods)
-
-**PCB Fabrication and Assembly**
-
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino).The video below is running at a default speed of 150 rpm/PWMs, unlike the [code](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino)
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/test_bed_droneNano.png)
-
-The drone frame is from [Usmile®](https://www.amazon.com/usmile-Lightweight-Brushed-Quadcopter-Support/dp/B01MU440T0/ref=pd_bxgy_sccl_1/139-7860370-8970268?pd_rd_w=Vfa2j&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=VZWFDSZH27C90D7TXY30&pd_rd_wg=cUSfv&pd_rd_r=fc1c370a-43be-4ac0-86d6-d8efbbb1129c&pd_rd_i=B01MU440T0&psc=1) and the batteries are from [Sea Jump](https://www.amazon.com/sea-jump-Lithium-Quadcopter-Aircraft/dp/B07SLLVQ2Q/ref=sr_1_2?keywords=sea+jump&qid=1688439753&sr=8-2).
-
-### (Old Version 2) Schematic and PCB layout:
-
-This is another old version of the schematic--that is still a work in progress. Unlike old version 1, this version does not have a step-up voltage converter/booster. And for the PCB, I increased the trace width to 50 mil for the two battery sources and a seperate copper pour for the current powering the motor's. Because of design mistakes, this version should not be used for assembly but is here for documentation purposes only!! 
-    
-
-**Schematic**
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/SCH_nano_carrier_th_0-nano_carrier_th_1_2023-07-03.png)
-
-**3D CAD Top View**
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/3D_PCB8_2023-07-03.png)
-
-**Gerber file and 3D Gerber CAD VIEW**
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/3D_PCB8_2023-07-03%20(1).png)
-
-[Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB8_2023-07-03.zip)
-
-**Bill of Materials Spreedsheet**
-
-Same as old version, just without step-up voltage converter/booster module.
-
-**PCB Fabrication and Assembly**
-
-PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone to get the motors rotating up to a default speed of 255 rpm/PWMs as found here: [Spinny Motors](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino). The video below is running at a default speed of 255 rpm/PWMs, unlike the [code](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/motor_control.ino)
-
-The drone frame is the 3d printed frame created by Montvydas for his drone project, becuase the wheelbase dimensions are over 100mm, there more than enough room for 70mm propellers (which I will try out to see if this makes a difference lol) 
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0430.jpg)
-
-The video below shows the drone test bed in action
-
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0440.jpg)](https://youtube.com/shorts/05N-mQAQjKc?feature=share )
-
-As you can see in the video the connector that is supposed to power up the Ard board through the 5V pin does not work, but the connector attached to the 3V3 pin works (probably due to cutting the solder jumper).  The current test bed  weighs approx [88 grams](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0439.jpg) I am using [crazepony motors](https://www.amazon.com/Crazepony-4pcs-6x15mm-Motor-Speed/dp/B01M4QRVA1/ref=d_pd_sbs_sccl_4_2/146-0323629-2882043?pd_rd_w=4nrj8&content-id=amzn1.sym.979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_p=979276af-0315-48f7-920c-ae1ddfce33e2&pf_rd_r=9P9HVYWG6SGQQ5TKRNGA&pd_rd_wg=evypx&pd_rd_r=eab316bf-2237-4715-972e-642af09fbea6&pd_rd_i=B01M4QRVA1&psc=1) and  55mm propellers. As the video shows, the drone still has trouble taking off. Some solutions that I am probably going to try are getting larger propellers and getting more powerful motors. Hopefully that will make a difference! (or back to the drawing board :) lol  
-
-### (New Version) Schematic and PCB layout:
+### Schematic and PCB layout:
 
 This version of the schematic comes from the book [Teach an Arduino to Fly by David McGriffy](https://www.makershed.com/products/make-drones-pdf) in the book David uses the [Teensy 3.1](https://www.pjrc.com/teensy/teensy31.html) board and the add-in for the Arduino IDE to program the flight controller, I just switched the board and removed the  components that are not necessary for the Nano BLE 33 Rev 2. This design uses only one 3.7V 650mAh battery rather then the two that I used in the previous two designs. This should help with the weight issues I was having. To make this design work you need to buy a voltage regulator/booster (similar to the one I designed in Old Version 1) except in this design I bought a tried and tested booster (rather than design my own like I did in Old Version 1); in particular I bought [Matek VB2A5V 3-4.2V to 5V Voltage Booster ](https://www.racedayquads.com/products/matek-vb2a5-1s-lipo-to-5v-voltage-booster?currency=USD&variant=31467728207985&gclid=Cj0KCQjw0IGnBhDUARIsAMwFDLnRW7vPnVI_kPZZ07VLbTDB3pQNJlU3sNtUL8EGRetb_AuOmo7wnHUaAl3fEALw_wcB). Basically, the genius of David's design is that a 3.7v battery can be used to power the Arduino, motors, and other components. The battery's 3.7-4.2 variable discharge rate will power the motors, while the regulated 5v output  will power the Arduino through its vin pin and the auxiliary components (i.e a camera). The Arduino's 3v3 pin will power the [Lemon RX reciever](https://lemon-rx.com/index.php?route=product/product&product_id=263) to be controlled by the [Blade MLP4DSM 4Ch Controller](https://www.horizonhobby.com/product/mlp4dsm-4ch-transmitter-2.4ghz-bmcx2120sr/EFLH1064B.html?gclid=Cj0KCQjw0IGnBhDUARIsAMwFDLnIMOxdLQWNxmZvSB9TNVZfrrQnBrdQ40ycnGwFcJZ92rF96O86bkgaAlpqEALw_wcB) I will be using the drone frame from  David's book and modify David's code as found at [The visible drone](http://www.makedronesbook.com/projects/VizDrone). Get David's book to fully understand this Drone/flight control game, G!!! (highly recommend). 
 
@@ -217,7 +110,6 @@ This version of the schematic comes from the book [Teach an Arduino to Fly by Da
 
 [Gerber File](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/Gerber_PCB_PCB_ArudinoDrone_2023-08-19_2023-08-20.zip)
 
-**Bill of Materials Spreedsheet**
 
 **PCB Fabrication and Assembly**
 
@@ -240,13 +132,7 @@ And the drone frame was able to be simulated in the [learning to fly](https://gi
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)
 
-
-
-**Neural Network Flight Controller**
-
-To take advantage of the machine learning capabilities of the Arduino Nano 33 BLE Sense Rev 2, I decided to use the reinforcement learning enviornment [Learning to Fly](https://arxiv.org/abs/2103.02142) to train a PPO reinforcement learning agent for controlling the drone's motors to take off.
-
-### Testing and Resuslts:
+### Coding, Testing and Resuslts:
 
 -------------------------------------------------------------------------------
 ## Reference:
