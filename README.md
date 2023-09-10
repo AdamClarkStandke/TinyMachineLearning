@@ -3,6 +3,7 @@
 Developing Embedded Applications that for the most part deal with machine learning as detailed from the following books and tutorials:
 
 *[TinyML Cookbook by Gian Iodice](https://www.packtpub.com/product/tinyml-cookbook/9781801814973)
+
 *[Teach an Arduino to Fly by David McGriffy](https://www.makershed.com/products/make-drones-pdf)
 
 As Gian details Tiny machine learning is broadly defined as a fast growing field of machine learning technologies and applications including hardware (dedicated integrated circuits), algorithms and software capable of performing on-device sensor (vision, audio, IMU, biomedical, etc.) data analytics at extremely low power, typically in the mW range and below, and hence enabling a variety of always-on use-cases and targeting battery operated devices.[^1]
