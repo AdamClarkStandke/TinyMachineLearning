@@ -136,7 +136,7 @@ And the drone frame was able to be simulated in the [learning to fly](https://gi
 
 **Flight Loop**
 
-[Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
+[Flight Control System](https://create.arduino.cc/editor/polyglotman/539704fc-7b4b-4d89-a62b-e92eb24c2cf6/preview)
 
 -------------------------------------------------------------------------------
 ## Reference:
