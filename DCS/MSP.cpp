@@ -1,17 +1,22 @@
-#define TEENSY
-
+#include <ArduinoBLE.h>
 #include "MSP.h"
-
 #include "RX.h"
 #include "Motors.h"
 #include "PID.h"
 #include "Debug.h"
+#include "BLE_IMU.h"
 
 MSPInBuf mspInBuf1, mspInBuf2;
 
 uint8_t mspOutBuf[BUFLEN];
 int mspBufPosOut = 0;
 bool mspMsgRequested[MSPMSGMAX - MSPMSGMIN + 1];
+const char* deviceServiceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
+const char* deviceServiceCharacteristicUuid = "19b10001-e8f2-537e-4f6c-d104768a1214";
+BLEService commandService(deviceServiceUuid); 
+BLEByteCharacteristic commandCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite);
+
+
 
 void initMSP() {
   for (int i=MSPMSGMIN; i<MSPMSGMAX; i++)
@@ -22,10 +27,18 @@ void initMSP() {
    mspInBuf2.state = MSPSTATE_BEGIN;
    mspInBuf2.bufPos = 0;
 
-  Serial.begin(115200);
-#ifdef TEENSY
-  Serial3.begin(115200);
-#endif
+  //Serial.begin(115200);
+  if (!BLE.begin()) {
+    //Serial.println("- Starting Bluetooth® Low Energy module failed!");
+    while (1);
+  }
+
+  BLE.setLocalName("Drone");
+  BLE.setAdvertisedService(commandService);
+  commandService.addCharacteristic(commandCharacteristic);
+  BLE.addService(commandService);
+  commandCharacteristic.writeValue(-1);
+  BLE.advertise();
 
 }
 
@@ -50,6 +63,7 @@ void mspWriteWord(uint16_t theWord)
   mspOutBuf[mspBufPosOut++] = theWord >> 8;  
 }
 
+// Sir Bluetooth Write Command
 void mspWriteEnd()
 {
   mspOutBuf[3] = mspBufPosOut - 5; // size
@@ -59,13 +73,20 @@ void mspWriteEnd()
   for (int i=3; i<mspBufPosOut; i++)
     crc ^= (mspOutBuf[i] & 0xff);
   mspOutBuf[mspBufPosOut++] = crc;  // checksum
-
+  
+  //Query the central Bluetooth® Low Energy device connected.
+  BLEDevice central = BLE.central();
   for (int i=0; i<mspBufPosOut; i++)
   {
-    Serial.write(mspOutBuf[i]);
+    // Serial.write(mspOutBuf[i]);
     //if (mspOutBuf[4] != MSP_DEBUG)
-      Serial3.write(mspOutBuf[i]);
+
+    // Bluetooth write communication to ground station
+    if(central && central.connected()){
+      commandCharacteristic.writeValue(mspOutBuf[i]);
+    }
   }
+
 }
 
 //-------------------------------------------------------
@@ -121,20 +142,32 @@ void mspProcessChar(int16_t ch, MSPInBuf* buf)
   }
 }
 
+// Sir Bluetooth  Read Command
 void mspRead() {
   // process usb chars
-  while (Serial.available())
-  {
-    int16_t ch = Serial.read();
-    mspProcessChar(ch, &mspInBuf1);
+  // while (Serial.available())
+  // {
+  //   int16_t ch = Serial.read();
+  //   mspProcessChar(ch, &mspInBuf1);
+  // }
+
+  //Query the central Bluetooth® Low Energy device connected.
+  BLEDevice central = BLE.central();
+  if(central){
+    while (central.connected())
+    {
+      if (commandCharacteristic.valueUpdated()){
+        int16_t ch; 
+        commandCharacteristic.readValue(ch); 
+        mspProcessChar(ch, &mspInBuf2);
+      }
+      else{
+        central.disconnect();
+      }
+    }
+
   }
 
-  // process bluetooth chars
-  while (Serial3.available())
-  {
-    int16_t ch = Serial3.read();
-    mspProcessChar(ch, &mspInBuf2);
-  }
 }  
 
 void mspWrite() {
@@ -152,14 +185,12 @@ void mspWrite() {
     if (mspMsgRequested[i-MSPMSGMIN])
     {
       switch (i) {
-        //case (MSP_IDENT)    : writeMSP_IDENT();    break;   // version/type
-        //case (MSP_RAW_IMU)  : writeMSP_RAW_IMU();  break;   // gyro/accel data
-        //case (MSP_RC)       : writeMSP_RC();       break;   // rc input message
-        //case (MSP_ATTITUDE) : writeMSP_ATTITUDE(); break;   // yaw/roll/pitch
-        //case (MSP_MOTOR)    : writeMSP_MOTOR();    break;   // motor msg
-        //case (MSP_PID)      : writeMSP_PID();      break;   // PID values
-        //case (MSP_DEBUG)    : writeMSP_DEBUG();    break;   // debug values
-        //case (MSP_LOGDATA)  : writeMSP_LOG();      break;   // log
+        case (MSP_IDENT)    : writeMSP_IDENT();    break;   // version/type
+        case (MSP_RC)       : writeMSP_RC();       break;   // rc input message
+        case (MSP_ATTITUDE) : writeMSP_ATTITUDE(); break;   // yaw/roll/pitch
+        case (MSP_MOTOR)    : writeMSP_MOTOR();    break;   // motor msg
+        case (MSP_PID)      : writeMSP_PID();      break;   // PID values
+        case (MSP_DEBUG)    : writeMSP_DEBUG();    break;   // debug values
       }
       mspMsgRequested[i-MSPMSGMIN]= false;
     }

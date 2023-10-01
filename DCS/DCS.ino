@@ -9,15 +9,15 @@ extern volatile uint16_t rcValue[];
 
 int16_t fastLoopTiming, slowLoopTiming;
 
-//void doMode();
-//void doPID();
-//void doMix();
+void doMode();
+void doPID();
+void doMix();
 
 void setup() {
-    //initMSP();
-    //initRX();
-    initIMU();  // (have to implement my IMU system for nano BLE)
-    //initMotors();
+    initMSP();
+    initRX();
+    initIMU();  
+    initMotors();
 }
 
 unsigned long fastLoopLength;
@@ -31,13 +31,12 @@ void loop() {
   if ((fastLoopLength) > FASTLOOPTARGET)
   {
     fastLoopStart = fastLoopEnd;
-    //readIMU();        // read raw gyro/accel/mag (have to implement my IMU system for nano BLE)
     calcIMU();        // calculate current yaw/pitch/roll
-    //doMode();         // calculate yaw/pitch/roll commands
-    //doPID();          // smooth yaw/pitch/roll commands
-    //doMix();          // converts cmds to motor speeds
-    //writeMotors();    // write to pwm
-    //mspRead();        // check for new msp msgs
+    doMode();         // calculate yaw/pitch/roll commands
+    doPID();          // smooth yaw/pitch/roll commands
+    doMix();          // converts cmds to motor speeds
+    writeMotors();    // write to pwm
+    mspRead();        // check for new msp msgs
     fastLoopTiming = micros() - fastLoopEnd;
   }
   
@@ -51,7 +50,7 @@ void loop() {
 
     //debugVals[0] = fastLoopTiming;
     //debugVals[1] = slowLoopTiming;
-    //mspWrite();
+    mspWrite();
     slowLoopTiming = micros() - slowLoopTimingStart;
   }
 

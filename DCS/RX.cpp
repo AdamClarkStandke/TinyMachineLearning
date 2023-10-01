@@ -13,7 +13,7 @@ extern int16_t debugVals[4];
 
 void initRX() {
   // serial port for spektrum sat rx
-  Serial1.begin(115200);  
+  Serial.begin(115200);  
 }
 
 // check for new frame, i.e. more than 2.5ms passed

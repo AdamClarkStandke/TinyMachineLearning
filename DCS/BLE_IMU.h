@@ -54,3 +54,4 @@ class MyBoschSensor: public BoschSensorClass {
 
 void initIMU();
 void calcIMU();
+void writeMSP_ATTITUDE();
