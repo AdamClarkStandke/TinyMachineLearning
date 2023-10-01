@@ -117,8 +117,11 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I creat
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0478.jpg)](https://youtu.be/VT2iOiBPnwo)
 
+### Basic Flight Control System:
 
-### Modeling:
+[Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
+
+### AI Flight Control System:
 
 Because the drone frames available in [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/gym_pybullet_drones/assets) are different from the drone frame that I will be using I needed to model the drone frame (as best I could) in [blender](https://www.blender.org/). That way it could be simulated kind of accurately in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environmnet. I used the [cf2.dae](https://github.com/utiasDSL/gym-pybullet-drones/blob/master/gym_pybullet_drones/assets/cf2.dae) as a template in regards to modeling the propellers:   
 
@@ -132,11 +135,6 @@ And the drone frame was able to be simulated in the [learning to fly](https://gi
 
 [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)
 
-### Coding, Testing and Resuslts:
-
-**Flight Loop**
-
-[Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
 
 -------------------------------------------------------------------------------
 ## Reference:
