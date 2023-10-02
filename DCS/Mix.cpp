@@ -41,18 +41,18 @@ void doMix(){
   motorCmd[3] += (int16_t)(axisCmdPID[0] * ( axisCmdPID[3]));
 
   // find max motor value
-  int16_t maxMotor = 0;
-  for (int i=0; i<4; i++){
-    maxMotor = max(motorCmd[i], maxMotor);
-  }
+  // int16_t maxMotor = 0;
+  // for (int i=0; i<4; i++){
+  //   maxMotor = max(motorCmd[i], maxMotor);
+  // }
   // scale all values if needed
-  if (maxMotor > 1000)
-  {
-    float scale = 1000.0f / (float)maxMotor;
-    for (int i=0; i<4; i++){
-      motorCmd[i] = (int16_t)(scale * (float)motorCmd[i]);
-    }
-  }
+  // if (maxMotor > 1000)
+  // {
+  //   float scale = 1000.0f / (float)maxMotor;
+  //   for (int i=0; i<4; i++){
+  //     motorCmd[i] = (int16_t)(scale * (float)motorCmd[i]);
+  //   }
+  // }
 
   // to output if armed
   if (rcValue[4] < MIDRC)
@@ -65,6 +65,7 @@ void doMix(){
   {
     for (int i=0; i<4; i++){
       motor[i] = 1000;
+      
     }
   }
 

@@ -23,9 +23,6 @@ void read_data() {
 }
 
 void initIMU(){
-  // Serial.begin(115200);
-  // while (!Serial);
-  // myIMU.debug(Serial);
   //callback function to read data from
   myIMU.onInterrupt(read_data);
   myIMU.begin();

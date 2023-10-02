@@ -62,8 +62,8 @@ void serialEvent1() {
   checkForNewFrame();
   
   // put the data in buffer
-  while ((Serial1.available()) && (rxBufPos < RX_BUFFER_SIZE))
-    rxBuf[rxBufPos++] = (char)Serial1.read();
+  while ((Serial.available()) && (rxBufPos < RX_BUFFER_SIZE))
+    rxBuf[rxBufPos++] = (char)Serial.read();
 
   // parse frame if done
   if (rxBufPos == SPEK_FRAME_SIZE)

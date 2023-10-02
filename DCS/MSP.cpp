@@ -27,9 +27,8 @@ void initMSP() {
    mspInBuf2.state = MSPSTATE_BEGIN;
    mspInBuf2.bufPos = 0;
 
-  //Serial.begin(115200);
+  
   if (!BLE.begin()) {
-    //Serial.println("- Starting Bluetooth® Low Energy module failed!");
     while (1);
   }
 
@@ -78,9 +77,7 @@ void mspWriteEnd()
   BLEDevice central = BLE.central();
   for (int i=0; i<mspBufPosOut; i++)
   {
-    // Serial.write(mspOutBuf[i]);
-    //if (mspOutBuf[4] != MSP_DEBUG)
-
+   
     // Bluetooth write communication to ground station
     if(central && central.connected()){
       commandCharacteristic.writeValue(mspOutBuf[i]);
@@ -144,25 +141,16 @@ void mspProcessChar(int16_t ch, MSPInBuf* buf)
 
 // Sir Bluetooth  Read Command
 void mspRead() {
-  // process usb chars
-  // while (Serial.available())
-  // {
-  //   int16_t ch = Serial.read();
-  //   mspProcessChar(ch, &mspInBuf1);
-  // }
 
   //Query the central Bluetooth® Low Energy device connected.
   BLEDevice central = BLE.central();
   if(central){
-    while (central.connected())
+    if(central.connected())
     {
       if (commandCharacteristic.valueUpdated()){
         int16_t ch; 
         commandCharacteristic.readValue(ch); 
         mspProcessChar(ch, &mspInBuf2);
-      }
-      else{
-        central.disconnect();
       }
     }
 

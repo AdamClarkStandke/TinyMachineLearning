@@ -2,7 +2,7 @@
 #include "MSP.h"
 
 uint16_t motor[4];
-uint8_t PWM_PIN[4] = {5, 6, 23, 21};   //for a quad+: rear,right,left,front
+uint8_t PWM_PIN[4] = {5, 2, 4, 3};  //for a quad+: rear,right,left,front
 
 extern uint16_t debugVals[4];
 
