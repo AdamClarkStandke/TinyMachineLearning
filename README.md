@@ -115,11 +115,13 @@ This version of the schematic comes from the book [Teach an Arduino to Fly by Da
 
 PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I created a test bed to program the drone as shown in the photos below. The drone frame is a [Syma X5C Frame](https://www.amazon.com/Syma-Channel-2-4GHz-Explorers-Copter/dp/B00MNG37C2/ref=asc_df_B00MNG37C2/?tag=hyprod-20&linkCode=df0&hvadid=312184153387&hvpos=&hvnetw=g&hvrand=2952487919274782735&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9006587&hvtargid=pla-587640326317&psc=1) 
 
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0478.jpg)](https://youtu.be/VT2iOiBPnwo)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0478.jpg)]
 
 ### Basic Flight Control System:
 
-[Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
+[Drone Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
+
+[Drone Ground Control Message System](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ground_control/ground_control.ino)
 
 ### AI Flight Control System:
 
