@@ -1,11 +1,17 @@
 #include <ArduinoBLE.h>
 #include <Arduino.h>
+// Left Controller Pin Congfig
 #define ANALOG_X_PIN A2
 #define ANALOG_Y_PIN A3
 #define ANALOG_BUTTON_PIN A4
-//Default values when axis not actioned
-#define ANALOG_X_CORRECTION 128
-#define ANALOG_Y_CORRECTION 128
+// TODO: Right Controller Pin Congfig
+// MIN and MAX throttle values
+#define MAX_THROTTLE 1800
+#define MIN_THROTTLE 1000
+// Set the range produced by the joysticks
+#define ADC_MIN 0
+#define ADC_MAX 26400
+BLEDevice peripheral;
 
 struct button {
   byte pressed = 0;
@@ -31,25 +37,6 @@ void setup() {
   BLE.advertise();
   Serial.println("Arduino Nano 33 BLE Sense (Central Device)");
   Serial.println(" ");
-}
-
-
-void loop() {
-  analog analog;
-  analog.x = readAnalogAxisLevel(ANALOG_X_PIN) - ANALOG_X_CORRECTION;
-  analog.y = readAnalogAxisLevel(ANALOG_Y_PIN) - ANALOG_Y_CORRECTION;
-  analog.button.pressed = isAnalogButtonPressed(ANALOG_BUTTON_PIN);
-  Serial.print("X:");
-  Serial.println(analog.x);
-  Serial.print("Y:");
-  Serial.println(analog.y);
-  //connectToPeripheral(analog);
-}
-
-//--------------------------------------START BLE COMMUNICATION CODE----------------------------------------
-
-void connectToPeripheral(analog &analog){
-  BLEDevice peripheral;
   Serial.println("- Discovering peripheral device...");
   do
   {
@@ -66,12 +53,51 @@ void connectToPeripheral(analog &analog){
     Serial.println(peripheral.advertisedServiceUuid());
     Serial.println(" ");
     BLE.stopScan();
-    controlPeripheral(peripheral, analog);
-  }
+    }
+
 }
 
 
-void controlPeripheral(BLEDevice peripheral, analog &analog) {
+void loop() {
+  // Create objects
+  analog leftController;
+  analog rightController;
+  // Read leftController
+  leftController.x = readAnalogAxisLevel(ANALOG_X_PIN);
+  leftController.y = readAnalogAxisLevel(ANALOG_Y_PIN);
+  leftController.button.pressed = isAnalogButtonPressed(ANALOG_BUTTON_PIN);
+  // TODO: Throttle Control
+  // Check if need to send start up or shut down sequence
+  // // if the button has been pressed pin will go LOW
+  // if (leftController.button.pressed == LOW){
+  // // Send sequence to start the drone motors
+  // throttle = 1000;
+  // Replace with BLE: sendPacket(1000, 1000, 1500, 1500);
+  //   delay(250);
+  // Replace with BLE: sendPacket(1000, 1500, 1500, 1500);
+  //   delay(250);
+  //   linkComplete = true;
+  // }
+  // if (leftController.button.pressed == LOW){
+  // // Send end sequence to stop the drone motors
+  // throttle = 1000;
+  // Replace with BLE: sendPacket(1000, 2000, 1500, 1500);
+  //   delay(250);
+  // Replace with BLE: sendPacket(1000, 1500, 1500, 1500);
+  //   delay(250);
+  // }
+  // TODO: Read right Controller
+  Serial.print("X:");
+  Serial.println(leftController.x);
+  //Serial.print("Y:");
+  //Serial.println(leftController.y);
+  controlPeripheral(peripheral,leftController, rightController);
+}
+
+//--------------------------------------START BLE COMMUNICATION CODE----------------------------------------
+
+
+void controlPeripheral(BLEDevice peripheral, analog &analogOne, analog &analogTwo) {
   Serial.println("- Connecting to peripheral device...");
   if (peripheral.connect()) {
     Serial.println("* Connected to peripheral device!");
@@ -95,20 +121,20 @@ void controlPeripheral(BLEDevice peripheral, analog &analog) {
     peripheral.disconnect();
     return;
   }
-  BLECharacteristic gestureCharacteristic = peripheral.characteristic(deviceServiceCharacteristicUuid);
-  if (!gestureCharacteristic) {
+  BLECharacteristic droneCharacteristic = peripheral.characteristic(deviceServiceCharacteristicUuid);
+  if (!droneCharacteristic) {
     Serial.println("* Peripheral device does not have gesture_type characteristic!");
     peripheral.disconnect();
     return;
-  } else if (!gestureCharacteristic.canWrite()) {
+  } else if (!droneCharacteristic.canWrite()) {
     Serial.println("* Peripheral does not have a writable gesture_type characteristic!");
     peripheral.disconnect();
     return;
   }
   while (peripheral.connected()) {
-      Serial.print("* Writing value to gesture_type characteristic: ");
+      Serial.print("Writing out leftController vlaues");
       // writing joystick throttle, pitch, roll yaw to drone rcValue 
-      gestureCharacteristic.writeValue((byte)analog.x);
+      droneCharacteristic.writeValue((byte)analogOne.x);
       Serial.println("* Writing value to gesture_type characteristic done!");
       Serial.println(" ");
   }
@@ -117,9 +143,17 @@ void controlPeripheral(BLEDevice peripheral, analog &analog) {
 
 // Helper Functions
 byte readAnalogAxisLevel(int pin){
-  return map(analogRead(pin), 0, 1023, 0, 255);
+  return map(analogRead(pin), ADC_MIN, ADC_MAX, 1000, 2000);
 }
  
 bool isAnalogButtonPressed(int pin){
   return digitalRead(pin) == 0;
 }
+
+// To compensate for inaccuracy and fluctuations in readings around mid value
+int smooth(int value){
+  if (value < 1525 && value > 1475)
+    value = 1500;
+  return value;
+}
+
