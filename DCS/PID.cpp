@@ -1,7 +1,6 @@
 #include "Arduino.h"
 #include "Config.h"
 #include "MSP.h"
-#include "RX.h"
 
 extern float axisCmd[];
 extern int16_t debugVals[];

@@ -1,5 +1,4 @@
 #include "Config.h"
-#include "RX.h"
 #include "BLE_IMU.h"
 #include "Motors.h"
 #include "MSP.h"
@@ -14,6 +13,7 @@ void doPID();
 void doMix();
 
 void setup() {
+    Serial.begin(9600);
     initMSP();
     initRX();
     initIMU();  
@@ -32,11 +32,17 @@ void loop() {
   {
     fastLoopStart = fastLoopEnd;
     calcIMU();        // calculate current yaw/pitch/roll
+    Serial.println("IMU CALC Done");
     doMode();         // calculate yaw/pitch/roll commands
+    //Serial.println("Mode Done");
     doPID();          // smooth yaw/pitch/roll commands
+    //Serial.println("PID Done");
     doMix();          // converts cmds to motor speeds
+    //Serial.println("Mixing Done");
     writeMotors();    // write to pwm
+    //Serial.println("WritingMotors Done");
     mspRead();        // check for new msp msgs
+    //Serial.println("Message Read Done");
     fastLoopTiming = micros() - fastLoopEnd;
   }
   

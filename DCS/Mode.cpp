@@ -2,7 +2,6 @@
 
 #include "Arduino.h"
 #include "Config.h"
-#include "RX.h"
 #include "Debug.h"
 
 extern volatile uint16_t rcValue[];

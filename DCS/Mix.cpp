@@ -3,7 +3,6 @@
 //
 
 #include "Arduino.h"
-#include "RX.h"
 #include "MSP.h"
 
 

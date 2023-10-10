@@ -8,7 +8,7 @@ float IMURoll,IMUPitch,IMUHead;        // cooked IMU data
 float Acc[3], Gyro[3], Mag[3];         // raw IMU data
 float   throttleCorrection;
 Mahony filter;
-MyBoschSensor myIMU(Wire1);
+MyBoschSensor myIMU(Wire);
 
 void read_data() {
   if (myIMU.accelerationAvailable()){
@@ -41,6 +41,12 @@ void calcIMU(){
   IMURoll = filter.getRoll();
   IMUPitch = filter.getPitch();
   IMUHead = filter.getYaw();
+  Serial.print("IMURoll:");
+  Serial.println(IMURoll);
+  Serial.print("IMUPitch:");
+  Serial.println(IMUPitch);
+  Serial.print("IMUHead:");
+  Serial.println(IMUHead);
 }
 
 
