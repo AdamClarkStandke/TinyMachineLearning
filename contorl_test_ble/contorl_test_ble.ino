@@ -6,9 +6,7 @@
 #define ANALOG_BUTTON_PIN A4
 #define MAX_THROTTLE 1800
 #define MIN_THROTTLE 1000
-// Set the range produced by the joysticks
-#define ADC_MIN 0
-#define ADC_MAX 26400
+int bufferStore[3] = {0, 0, 0}; 
 
 struct button {
   byte pressed = 0;
@@ -96,29 +94,26 @@ void controlPeripheral(BLEDevice peripheral) {
   analog leftController;
   analog rightController;
   while (peripheral.connected()) {
-      leftController.x = readAnalogAxisLevel(ANALOG_X_PIN);
-      leftController.y = readAnalogAxisLevel(ANALOG_Y_PIN);
-      leftController.button.pressed = isAnalogButtonPressed(ANALOG_BUTTON_PIN);
-      Serial.println(leftController.x);
-      gestureCharacteristic.writeValue(leftController.x);
-      delay(100);
-      Serial.println(leftController.y);
-      gestureCharacteristic.writeValue(leftController.y);
-      delay(100);
-      Serial.println(leftController.button.pressed);
-      gestureCharacteristic.writeValue((byte)leftController.button.pressed);
-      delay(100);
+      bufferStore[0] = smooth(readAnalogAxisLevel(ANALOG_X_PIN));
+      bufferStore[1] = smooth(readAnalogAxisLevel(ANALOG_Y_PIN));
+      bufferStore[2] = isAnalogButtonPressed(ANALOG_BUTTON_PIN);
+      // // Increase or decrease throttle based on joystick postion
+      // if (jThrottle >= 1550 && throttle < MAX_THROTTLE)
+      // throttle += 15;
+      // if (jThrottle <= 1450 && throttle > 1000)
+      // throttle -= 15; 
+      gestureCharacteristic.writeValue(bufferStore, 6);
   }
   Serial.println("- Peripheral device disconnected!");
 }
 
 // Helper Functions
-byte readAnalogAxisLevel(int pin){
-  return map(analogRead(pin), ADC_MIN, ADC_MAX, 1000, 2000);
+int readAnalogAxisLevel(int pin){
+  return map(analogRead(pin), 0, 1023, 1000, 2000);
 }
  
 bool isAnalogButtonPressed(int pin){
-  return digitalRead(pin) == 0;
+  return digitalRead(pin)==LOW;
 }
 
 // To compensate for inaccuracy and fluctuations in readings around mid value
