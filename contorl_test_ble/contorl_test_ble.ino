@@ -4,7 +4,7 @@
 #define ANALOG_X_PIN A2
 #define ANALOG_Y_PIN A3
 #define BUTTON_PIN 12
-int bufferStore[3] = {0, 0, 0}; 
+int bufferStore[4] = {0, 0, 0, 0}; 
 
 
 const char* deviceServiceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
@@ -97,7 +97,8 @@ void controlPeripheral(BLEDevice peripheral) {
       }else{
         bufferStore[2]= 0; 
       }
-
+      //random value for now
+      bufferStore[3] = 15;
       // Will be implemented on the left joystick using Y pin; and yaw
       // // Increase or decrease throttle based on joystick postion
       // if (jThrottle >= 1550 && throttle < MAX_THROTTLE)
@@ -105,7 +106,7 @@ void controlPeripheral(BLEDevice peripheral) {
       // if (jThrottle <= 1450 && throttle > 1000)
       // throttle -= 15; 
 
-      gestureCharacteristic.writeValue(bufferStore, 6);
+      gestureCharacteristic.writeValue(bufferStore, 8);
   }
   Serial.println("- Peripheral device disconnected!");
 }
