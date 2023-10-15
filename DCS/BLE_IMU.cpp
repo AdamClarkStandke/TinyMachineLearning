@@ -1,7 +1,6 @@
 #include <MahonyAHRS.h>
 #include "BLE_IMU.h"
 #include <Wire.h>
-#include "MSP.h"
 #include "Config.h"
 
 float IMURoll,IMUPitch,IMUHead;        // cooked IMU data
@@ -49,13 +48,3 @@ void calcIMU(){
   Serial.println(IMUHead);
 }
 
-
-
-//---------------------
-void writeMSP_ATTITUDE() {
-    mspWriteStart(MSP_ATTITUDE);
-    mspWriteWord((int16_t)(IMURoll*10));
-    mspWriteWord((int16_t)(IMUPitch*10));
-    mspWriteWord((int16_t)(IMUHead));
-    mspWriteEnd();
-}

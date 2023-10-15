@@ -1,17 +1,13 @@
-
-
 #include "Arduino.h"
 #include "Config.h"
-#include "Debug.h"
+#include "BLE_RX.h"
 
-extern volatile uint16_t rcValue[];
+extern uint16_t rcValue[];
 extern float IMURoll,IMUPitch,IMUHead;
-extern int16_t debugVals[4];
 
 float rcRate[4] = {1.00f, 1.0f, 1.0f, 3.0f};
 float maxAngle = 55.0f;
 float prevHead = 0.0f;
-//float maxRate[4] = { 1.0f, 1.0f, 1.0f, 90.0f/1.0f }; // in deg/sec/cyclerate
 float axisCmd[4] = {0.0f, 0.0f, 0.0f, 0.0f};  //output
 
 enum FlightModes {MODE_MANUAL, MODE_STABILIZE};
@@ -52,9 +48,7 @@ void doMode() {
     axisCmd[1] = -((float)IMURoll  - maxAngle * rcRate[1] * (float)((int16_t)rcValue[1] - (int16_t)MIDRC) / halfRange) / 90.0f;
     axisCmd[2] = -((float)IMUPitch - maxAngle * rcRate[2] * (float)((int16_t)rcValue[2] - (int16_t)MIDRC) / halfRange) / 90.0f;
     // yaw: axis cmd = imu rate - rc rate
-    axisCmd[3] =  (yawRate         - 90.0f    * rcRate[3] * (float)((int16_t)rcValue[3] - (int16_t)MIDRC) / halfRange) / 90.0f;
-    //debugVals[3] = yawRate * 100;
-    //debugVals[2] = axisCmd[3] * 100;
+    axisCmd[3] =  (yawRate- 90.0f* rcRate[3] * (float)((int16_t)rcValue[3] - (int16_t)MIDRC) / halfRange) / 90.0f;
     prevHead = IMUHead;
   }
 }

@@ -1,9 +1,7 @@
 #include "Arduino.h"
 #include "Config.h"
-#include "MSP.h"
 
 extern float axisCmd[];
-extern int16_t debugVals[];
 
 #define MYPIDITEMS 4
 float axisCmdPID[MYPIDITEMS] = { 0.0f, 0.0f, 0.0f, 0.0f };
@@ -34,39 +32,6 @@ void doPID() {
       axisCmdPID[i] = (pid_p[i] * e) + (pid_i[i] * pid_isum[i]) + (pid_d[i] * pid_ddt[i]);
     prevE[i] = e;
   }
-
-  debugVals[0] = 1000 * tpa;
-  debugVals[1] = axisCmd[0];
-//  debugVals[2] = 1000 * pid_ddt[2];
-//  debugVals[3] = 1000 * axisCmdPID[2];
 }
 
-#define PIDITEMS 10
-
-void readMSP_SET_PID(MSPInBuf* buf) {
-  int bufPos = 1; // skip cmd
-    for (int i=1; i<MYPIDITEMS; i++) // zero is throttle, not in mw
-    {
-      pid_p[i] = (float)buf->buf[bufPos++] / 10.0f;
-      pid_i[i] = (float)buf->buf[bufPos++] / 1000.0f;
-      pid_d[i] = (float)buf->buf[bufPos++] / 10.0f;
-    }  
-}
-
-void writeMSP_PID() {
-    mspWriteStart(MSP_PID);
-    for (int i=1; i<MYPIDITEMS; i++) // zero is throttle, not in mw
-    {
-      mspWriteByte(pid_p[i] * 10);
-      mspWriteByte(pid_i[i] * 1000);
-      mspWriteByte(pid_d[i] * 10);
-    }
-    for (int i=MYPIDITEMS; i<PIDITEMS; i++) // +1 for skipping throttle
-    {
-      mspWriteByte((uint8_t)i); // null values up to the required amount
-      mspWriteByte((uint8_t)0); // null values up to the required amount
-      mspWriteByte((uint8_t)0); // null values up to the required amount
-    }
-    mspWriteEnd();
-}
 
