@@ -28,24 +28,24 @@ void loop() {
   if ((fastLoopLength) > FASTLOOPTARGET)
   {
     fastLoopStart = fastLoopEnd;
-    BLE.poll();       // poll bluetooth for new rcvalues
-    calcIMU();        // calculate current yaw/pitch/roll
-    doMode();         // calculate yaw/pitch/roll commands
+    BLE.poll();       // poll bluetooth for new Joystick values
+    calcIMU();        // calculate current yaw/pitch/roll from IMU
+    doMode();         // calculate yaw/pitch/roll axis commands
     doPID();          // smooth yaw/pitch/roll commands
-    doMix();          // converts cmds to motor speeds
+    doMix();          // converts axis cmds to motor speeds
     writeMotors();    // write to pwm
     fastLoopTiming = micros() - fastLoopEnd;
   }
   
-  //  the slow loop for communications
-  unsigned long slowLoopEnd = millis();
-  slowLoopLength = slowLoopEnd - slowLoopStart;
-  if ((slowLoopLength) > SLOWLOOPTARGET)
-  {
-    slowLoopStart = slowLoopEnd;
-    long slowLoopTimingStart = micros();
-    slowLoopTiming = micros() - slowLoopTimingStart;
-  }
+  // //  the slow loop for communications
+  // unsigned long slowLoopEnd = millis();
+  // slowLoopLength = slowLoopEnd - slowLoopStart;
+  // if ((slowLoopLength) > SLOWLOOPTARGET)
+  // {
+  //   slowLoopStart = slowLoopEnd;
+  //   long slowLoopTimingStart = micros();
+  //   slowLoopTiming = micros() - slowLoopTimingStart;
+  // }
 
 }
 

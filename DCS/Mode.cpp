@@ -29,6 +29,9 @@ void doMode() {
   // todo: throttleMid, exp
   axisCmd[0] = (constrain(rcValue[0], MINRC, MAXRC) - MINRC)*1.67f;
 
+  // Debug throttle axis command 
+  // Serial.println(axisCmd[0]);
+
   float halfRange = (float)(MIDRC - MINRC);
   switch (mode)
   {
@@ -47,9 +50,19 @@ void doMode() {
     // pitch/roll: axis cmd = imu angle - rc angle
     axisCmd[1] = -((float)IMURoll  - maxAngle * rcRate[1] * (float)((int16_t)rcValue[1] - (int16_t)MIDRC) / halfRange) / 90.0f;
     axisCmd[2] = -((float)IMUPitch - maxAngle * rcRate[2] * (float)((int16_t)rcValue[2] - (int16_t)MIDRC) / halfRange) / 90.0f;
+    
+    // Debug roll axis command i.e.  IMURoll  - rc angle
+    // Serial.println(axisCmd[1]);
+    // Debug pitch axis command i.e. IMUPitch - rc angle 
+    // Serial.println(axisCmd[2]);
+
     // yaw: axis cmd = imu rate - rc rate
     axisCmd[3] =  (yawRate- 90.0f* rcRate[3] * (float)((int16_t)rcValue[3] - (int16_t)MIDRC) / halfRange) / 90.0f;
     prevHead = IMUHead;
+
+    // Debug yaw axis command i.e.  IMUHead - rc angle
+    // Serial.println(axisCmd[3]);
+    
   }
 }
 

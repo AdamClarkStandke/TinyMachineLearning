@@ -42,11 +42,17 @@ void doMix(){
     float scale = 1000.0f / (float)maxMotor;
     for (int i=0; i<4; i++){
       motorCmd[i] = (int16_t)(scale * (float)motorCmd[i]);
+      
+      // Debug scaled motor command values i.e. axis commands
+      // Serial.println(motorCmd[i]);
     }
   }
   //write motor commands to  actual motors
   for (int i=0; i<4; i++){
       motor[i] = motorCmd[i] + 1000;
+      
+      // Debug actual motor values sent to motors
+      // Serial.println(motor[i]);
   }
   
 }

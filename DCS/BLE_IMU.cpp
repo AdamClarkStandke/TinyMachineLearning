@@ -40,6 +40,8 @@ void calcIMU(){
   IMURoll = filter.getRoll();
   IMUPitch = filter.getPitch();
   IMUHead = filter.getYaw();
+
+  // Debug IMU values
   Serial.print("IMURoll:");
   Serial.println(IMURoll);
   Serial.print("IMUPitch:");
