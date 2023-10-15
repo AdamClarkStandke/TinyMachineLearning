@@ -123,21 +123,21 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).I creat
 
 [Drone Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
 
-[Drone Ground Control Message System](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/ground_control/ground_control.ino)
+[JoyStick Controller](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/contorl_test_ble/contorl_test_ble.ino)
 
 ### AI Flight Control System:
 
-Because the drone frames available in [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/gym_pybullet_drones/assets) are different from the drone frame that I will be using I needed to model the drone frame (as best I could) in [blender](https://www.blender.org/). That way it could be simulated kind of accurately in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environmnet. I used the [cf2.dae](https://github.com/utiasDSL/gym-pybullet-drones/blob/master/gym_pybullet_drones/assets/cf2.dae) as a template in regards to modeling the propellers:   
+<!--Because the drone frames available in [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/gym_pybullet_drones/assets) are different from the drone frame that I will be using I needed to model the drone frame [//]:  (as best I could) in [blender](https://www.blender.org/). That way it could be simulated kind of accurately in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environmnet. I used the [cf2.dae](https://github.com/utiasDSL/gym-pybullet-drones/blob/master/gym_pybullet_drones/assets/cf2.dae) as a template in regards to modeling the propellers:   
 
-[Custom Drone](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/customDrone.dae)
+[//]:  [Custom Drone](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/customDrone.dae)
 
-I then created a [urdf file](http://wiki.ros.org/urdf) to import the collada file I created in blender and used the defualt properties, joints, and links found in the other drone frames in learning to fly.  
+[//]:  I then created a [urdf file](http://wiki.ros.org/urdf) to import the collada file I created in blender and used the defualt properties, joints, and links found in the other drone frames in learning to fly.  
 
-[RoboCain](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/droneOne.urdf)
+[//]:  [RoboCain](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/droneOne.urdf)
 
-And the drone frame was able to be simulated in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environment as seen below in the fly.py example:
+[//]:  And the drone frame was able to be simulated in the [learning to fly](https://github.com/utiasDSL/gym-pybullet-drones/tree/master/) rl environment as seen below in the fly.py example:
 
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)
+[//]:  [![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/drone_frame.png)](https://youtu.be/o9qXMjsNjKY)-->
 
 
 -------------------------------------------------------------------------------
