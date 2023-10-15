@@ -3,26 +3,17 @@
 // Left Controller Pin Congfig
 #define ANALOG_X_PIN A2
 #define ANALOG_Y_PIN A3
-#define ANALOG_BUTTON_PIN A4
-#define MAX_THROTTLE 1800
-#define MIN_THROTTLE 1000
+#define BUTTON_PIN 12
 int bufferStore[3] = {0, 0, 0}; 
 
-struct button {
-  byte pressed = 0;
-};
- 
-struct analog {
-  short x, y;
-  struct button button;
-};
 
 const char* deviceServiceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
 const char* deviceServiceCharacteristicUuid = "19b10001-e8f2-537e-4f6c-d104768a1214";
 
 void setup() {
   Serial.begin(9600);
-  pinMode(ANALOG_BUTTON_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_PIN, INPUT);
+  digitalWrite(BUTTON_PIN, HIGH);
   if (!BLE.begin()) {
     Serial.println("* Starting Bluetooth® Low Energy module failed!");
     while (1);
@@ -91,17 +82,29 @@ void controlPeripheral(BLEDevice peripheral) {
     peripheral.disconnect();
     return;
   }
-  analog leftController;
-  analog rightController;
   while (peripheral.connected()) {
-      bufferStore[0] = smooth(readAnalogAxisLevel(ANALOG_X_PIN));
-      bufferStore[1] = smooth(readAnalogAxisLevel(ANALOG_Y_PIN));
-      bufferStore[2] = isAnalogButtonPressed(ANALOG_BUTTON_PIN);
+      delay(10);
+      // reading roll joystick values (will be done on the right joystick) left=decrease roll right=increase roll
+      bufferStore[0] = readAnalogAxisLevel(smoothOne(analogRead(ANALOG_X_PIN)));
+      // reading pitch joystick  values (will be done on the right joystick) up=decrease pitch down=increase pitch 
+      delay(10);
+      bufferStore[1] = readAnalogAxisLevel(smoothTwo(analogRead(ANALOG_Y_PIN)));
+      // right button on right joystick pressed down to stop motors
+      // (left button on left joystick pressed down to start motors)
+      if (digitalRead(BUTTON_PIN) == LOW){
+      // Send sequence to start the drone motors
+        bufferStore[2] = 1; 
+      }else{
+        bufferStore[2]= 0; 
+      }
+
+      // Will be implemented on the left joystick using Y pin; and yaw
       // // Increase or decrease throttle based on joystick postion
       // if (jThrottle >= 1550 && throttle < MAX_THROTTLE)
       // throttle += 15;
       // if (jThrottle <= 1450 && throttle > 1000)
       // throttle -= 15; 
+
       gestureCharacteristic.writeValue(bufferStore, 6);
   }
   Serial.println("- Peripheral device disconnected!");
@@ -109,17 +112,23 @@ void controlPeripheral(BLEDevice peripheral) {
 
 // Helper Functions
 int readAnalogAxisLevel(int pin){
-  return map(analogRead(pin), 0, 1023, 1000, 2000);
+  return map(pin, 0, 1023, 1000, 2000);
 }
  
-bool isAnalogButtonPressed(int pin){
-  return digitalRead(pin)==LOW;
+bool isAnalogButtonPressed(pin_size_t pin){
+  return digitalRead(pin);
 }
 
-// To compensate for inaccuracy and fluctuations in readings around mid value
-int smooth(int value){
-  if (value < 1525 && value > 1475)
-    value = 1500;
+// To compensate for inaccuracy and fluctuations in readings around mid value of joystick (i.e. when not touching it)
+int smoothOne(int value){
+  if ((value < 580  && value > 564))
+    value = 500;
+  return value;
+}
+
+int smoothTwo(int value){
+  if (value == 1023)
+    value = 600;
   return value;
 }
 
