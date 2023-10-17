@@ -117,7 +117,7 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 
 ![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0504.jpg)
 
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0505.jpg)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0505.jpg)](https://www.youtube.com/watch?v=tLwMkpZ_w88)
 
 [Drone Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
 
