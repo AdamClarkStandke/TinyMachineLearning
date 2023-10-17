@@ -21,16 +21,17 @@ class MyBoschSensor: public BoschSensorClass {
 
       struct bmi2_sens_config sens_cfg[2];
       sens_cfg[0].type = BMI2_ACCEL;
-      sens_cfg[0].cfg.acc.bwp = BMI2_ACC_OSR2_AVG2;
-      sens_cfg[0].cfg.acc.odr = BMI2_ACC_ODR_25HZ;
+      sens_cfg[0].cfg.acc.bwp = BMI2_ACC_NORMAL_AVG4;
+      sens_cfg[0].cfg.acc.odr = BMI2_ACC_ODR_400HZ;
       sens_cfg[0].cfg.acc.filter_perf = BMI2_PERF_OPT_MODE;
-      sens_cfg[0].cfg.acc.range = BMI2_ACC_RANGE_4G;
+      sens_cfg[0].cfg.acc.range = BMI2_ACC_RANGE_16G;
       sens_cfg[1].type = BMI2_GYRO;
       sens_cfg[1].cfg.gyr.filter_perf = BMI2_PERF_OPT_MODE;
-      sens_cfg[1].cfg.gyr.bwp = BMI2_GYR_OSR2_MODE;
-      sens_cfg[1].cfg.gyr.odr = BMI2_GYR_ODR_25HZ;
+      sens_cfg[1].cfg.gyr.bwp = BMI2_GYR_NORMAL_MODE;
+      sens_cfg[1].cfg.gyr.odr = BMI2_GYR_ODR_400HZ;
       sens_cfg[1].cfg.gyr.range = BMI2_GYR_RANGE_2000;
       sens_cfg[1].cfg.gyr.ois_range = BMI2_GYR_OIS_2000;
+      sens_cfg[1].cfg.gyr.noise_perf = 1; 
 
       rslt = bmi2_set_int_pin_config(&int_pin_cfg, dev);
       if (rslt != BMI2_OK)

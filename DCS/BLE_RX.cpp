@@ -29,16 +29,15 @@ void writeGesture(BLEDevice central, BLECharacteristic characteristic) {
         } 
 
       // Debug Joystick values   
-      // Serial.println(rcValue[0]);
-      // Serial.println(rcValue[1]);
-      // Serial.println(rcValue[2]);
-      // Serial.println(rcValue[3]);
+      Serial.println(rcValue[0]);
+      Serial.println(rcValue[1]);
+      Serial.println(rcValue[2]);
+      Serial.println(rcValue[3]);
     }
   }
 }
 
 void initBLErx() {
-  Serial.begin(9600);
   if (!BLE.begin()) {
     Serial.println("- Starting Bluetooth® Low Energy module failed!");
     while (1);
