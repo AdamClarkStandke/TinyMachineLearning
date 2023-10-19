@@ -1,19 +1,24 @@
 #include <ArduinoBLE.h>
 #include <Arduino.h>
 // Left Controller Pin Congfig
-#define ANALOG_X_PIN A2
-#define ANALOG_Y_PIN A3
-#define BUTTON_PIN 12
+#define ANALOG_X_PIN A4
+#define ANALOG_Y_PIN A5
+// Right Controller Pin Congfig
+#define ANALOG_X1_PIN A2
+#define ANALOG_Y1_PIN A3
+#define MAX_THROTTLE 1800
 int bufferStore[4] = {0, 0, 0, 0}; 
-
+int input3Pin = 3;
+int input2Pin = 2;
+int throttle = 1000;
 
 const char* deviceServiceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
 const char* deviceServiceCharacteristicUuid = "19b10001-e8f2-537e-4f6c-d104768a1214";
 
 void setup() {
   Serial.begin(9600);
-  pinMode(BUTTON_PIN, INPUT);
-  digitalWrite(BUTTON_PIN, HIGH);
+  pinMode(input3Pin, INPUT);
+  pinMode(input2Pin, INPUT);
   if (!BLE.begin()) {
     Serial.println("* Starting Bluetooth® Low Energy module failed!");
     while (1);
@@ -83,29 +88,48 @@ void controlPeripheral(BLEDevice peripheral) {
     return;
   }
   while (peripheral.connected()) {
+      if (digitalRead(input3Pin) == HIGH){
+      // Send sequence to start the drone motors
+      throttle = 1000;
+      bufferStore[0] = 1000; 
+      bufferStore[1] = 1000; 
+      bufferStore[2] = 1500; 
+      bufferStore[3] = 1500; 
+      gestureCharacteristic.writeValue(bufferStore, 8);
+      delay(250);
+      gestureCharacteristic.writeValue(bufferStore, 8);
+      delay(250);
+      }
+      // if (digitalRead(input2Pin) == HIGH){
+      // // Send end sequence to stop the drone motors
+      // throttle = 1000;
+      // sendPacket(1000, 2000, 1500, 1500);
+      // delay(250);
+      // sendPacket(1000, 1500, 1500, 1500);
+      // delay(250);
+      // }
       delay(10);
-      // reading roll joystick values (will be done on the right joystick) left=decrease roll right=increase roll
+      // reading throttle
       bufferStore[0] = readAnalogAxisLevel(smoothOne(analogRead(ANALOG_X_PIN)));
-      // reading pitch joystick  values (will be done on the right joystick) up=decrease pitch down=increase pitch 
+      // reading yaw
       delay(10);
       bufferStore[1] = readAnalogAxisLevel(smoothTwo(analogRead(ANALOG_Y_PIN)));
-      // right button on right joystick pressed down to stop motors
-      // (left button on left joystick pressed down to start motors)
-      if (digitalRead(BUTTON_PIN) == LOW){
-      // Send sequence to start the drone motors
-        bufferStore[2] = 1; 
-      }else{
-        bufferStore[2]= 0; 
-      }
-      //random value for now
-      bufferStore[3] = 15;
-      // Will be implemented on the left joystick using Y pin; and yaw
-      // // Increase or decrease throttle based on joystick postion
-      // if (jThrottle >= 1550 && throttle < MAX_THROTTLE)
-      // throttle += 15;
-      // if (jThrottle <= 1450 && throttle > 1000)
-      // throttle -= 15; 
-
+      delay(10);
+      // reading pitch joystick  values (will be done on the right joystick) up=decrease pitch down=increase pitch 
+      bufferStore[2] = readAnalogAxisLevel(smoothOne(analogRead(ANALOG_X1_PIN)));
+      // reading roll joystick values (will be done on the right joystick) left=decrease roll right=increase roll
+      delay(10);
+      bufferStore[3] = readAnalogAxisLevel(smoothTwo(analogRead(ANALOG_Y1_PIN)));
+      // Increase or decrease throttle based on joystick postion
+      if (bufferStore[0] >= 1550 && throttle < MAX_THROTTLE)
+        throttle += 15;
+      if (bufferStore[0] <= 1450 && throttle > 1000)
+        throttle -= 15; 
+      bufferStore[0] = throttle; 
+      Serial.println(bufferStore[0]);
+      Serial.println(bufferStore[1]);
+      Serial.println(bufferStore[2]);
+      Serial.println(bufferStore[3]);
       gestureCharacteristic.writeValue(bufferStore, 8);
   }
   Serial.println("- Peripheral device disconnected!");

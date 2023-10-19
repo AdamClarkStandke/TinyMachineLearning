@@ -15,34 +15,34 @@ float IMURoll,IMUPitch,IMUHead;        // cooked IMU data
 float   throttleCorrection;
 ReefwingAHRS ahrs;
 SensorData data;                       // raw IMU data
-MyBoschSensor myIMU(Wire);
+// MyBoschSensor myIMU(Wire);
 
 
 void read_data() {
-  if (myIMU.accelerationAvailable()){
-    myIMU.readAcceleration(data.ax, data.ay, data.az);
+  if (IMU.accelerationAvailable()){
+    IMU.readAcceleration(data.ax, data.ay, data.az);
   }
-  if (myIMU.gyroscopeAvailable()){
-    myIMU.readGyroscope(data.gx, data.gy, data.gz);
+  if (IMU.gyroscopeAvailable()){
+    IMU.readGyroscope(data.gx, data.gy, data.gz);
   }
-  if (myIMU.magneticFieldAvailable()){
-    myIMU.readMagneticField(data.mx, data.my, data.mz);
+  if (IMU.magneticFieldAvailable()){
+    IMU.readMagneticField(data.mx, data.my, data.mz);
   }
 }
 
 
 void initIMU(){
-  //callback function to read data from
-  myIMU.onInterrupt(read_data);
-  myIMU.begin();
+  // ToDo: see why interrupt is not working
+  // myIMU.onInterrupt(read_data);
+  IMU.begin();
   ahrs.begin();
   ahrs.setFusionAlgorithm(SensorFusion::MAHONY);
   ahrs.setDeclination(-13.11);                      // Harrisburg, Pennsylvania
 }
 
 void calcIMU(){
-  // BMI270 gyroscope uses degrees/second
-  ahrs.setData(data);
+  
+  read_data(); // get raw data
   // Debug raw IMU data 
   // Serial.println(data.ax);
   // Serial.println(data.ay);
@@ -54,6 +54,7 @@ void calcIMU(){
   // Serial.println(data.my);
   // Serial.println(data.mz);
 
+  ahrs.setData(data);
   ahrs.update();  
   IMURoll = ahrs.angles.roll;
   IMUPitch = ahrs.angles.pitch;
