@@ -9,7 +9,7 @@ const char* deviceServiceCharacteristicUuid = "19b10001-e8f2-537e-4f6c-d104768a1
 int rcValue[4] = {0, 0, 0, 0}; 
 
 BLEService gestureService(deviceServiceUuid); 
-BLECharacteristic gestureCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite | BLENotify, 8);
+BLECharacteristic gestureCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite | BLENotify, sizeof(rcValue));
 
 
 void writeGesture(BLEDevice central, BLECharacteristic characteristic) {
@@ -23,15 +23,19 @@ void writeGesture(BLEDevice central, BLECharacteristic characteristic) {
     // Serial.println(" ");
 
       if (characteristic.written()) {
-        int x = characteristic.readValue(rcValue, 8);
-        for (int i=0; i<4; i++){
-          rcValue[i] = constrain(rcValue[i], MINRC, MAXRC);
-        } 
+        int x = characteristic.readValue(rcValue, sizeof(rcValue));
+        // for (int i=0; i<4; i++){
+        //   rcValue[i] = constrain(rcValue[i], MINRC, MAXRC);
+        // } 
 
-      // Debug Joystick values   
+      // Debug Joystick values  
+      Serial.print("Throtle:");
       Serial.println(rcValue[0]);
+      Serial.print("Roll:");
       Serial.println(rcValue[1]);
+      Serial.print("Pitch:");
       Serial.println(rcValue[2]);
+      Serial.print("Yaw:");
       Serial.println(rcValue[3]);
     }
   }
