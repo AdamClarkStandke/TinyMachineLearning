@@ -115,7 +115,7 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 
 ### Generic Flight Control System:
 
-[![CLICK HERE]()(https://youtube.com/shorts/NcdkylhPvnQ)
+[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0513.jpg)(https://youtube.com/shorts/NcdkylhPvnQ)
 
 [Drone Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
 
