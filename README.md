@@ -115,11 +115,9 @@ PCB Fabrication and assembly was done by [EasyEda](https://easyeda.com/).
 
 ### Generic Flight Control System:
 
-[![CLICK HERE](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/IMG_0505.jpg)](https://www.youtube.com/watch?v=tLwMkpZ_w88)
+[![CLICK HERE]()
 
 [Drone Flight Control System](https://github.com/AdamClarkStandke/TinyMachineLearning/tree/main/DCS)
-
-![](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/joystick_controller.jpg)
 
 [JoyStick Controller](https://github.com/AdamClarkStandke/TinyMachineLearning/blob/main/contorl_test_ble/contorl_test_ble.ino)
 
