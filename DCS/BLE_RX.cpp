@@ -11,32 +11,16 @@ int rcValue[4] = {0, 0, 0, 0};
 BLEService gestureService(deviceServiceUuid); 
 BLECharacteristic gestureCharacteristic(deviceServiceCharacteristicUuid, BLERead | BLEWrite | BLENotify, sizeof(rcValue));
 
-
 void writeGesture(BLEDevice central, BLECharacteristic characteristic) {
-  //Serial.println("- Discovering central device...");
   if (central) {
 
     // Debug Bluetooth communication connection to central device
-    // Serial.println("* Connected to central device!");
-    // Serial.print("* Device MAC address: ");
-    // Serial.println(central.address());
-    // Serial.println(" ");
-
       if (characteristic.written()) {
         int x = characteristic.readValue(rcValue, sizeof(rcValue));
-        // for (int i=0; i<4; i++){
-        //   rcValue[i] = constrain(rcValue[i], MINRC, MAXRC);
-        // } 
+        for (int i=0; i<4; i++){
+          rcValue[i] = abs(constrain(rcValue[i], MINRC, MAXRC));
+        } 
 
-      // Debug Joystick values  
-      Serial.print("Throtle:");
-      Serial.println(rcValue[0]);
-      Serial.print("Roll:");
-      Serial.println(rcValue[1]);
-      Serial.print("Pitch:");
-      Serial.println(rcValue[2]);
-      Serial.print("Yaw:");
-      Serial.println(rcValue[3]);
     }
   }
 }
@@ -53,10 +37,9 @@ void initBLErx() {
   gestureCharacteristic.setEventHandler(BLEWritten, writeGesture);
   BLE.addService(gestureService);
   BLE.advertise();
-
   // Debug Bluetooth Communication i.e. init peripheral device
-  // Serial.println("Nano 33 BLE (Peripheral Device)");
-  // Serial.println(" ");
+  // Serial.println("Connected to the Nano 33 BLE (Peripheral Device)");
+  // Serial.println(" "); 
 }
 
 

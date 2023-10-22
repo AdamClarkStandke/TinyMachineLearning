@@ -5,11 +5,15 @@ uint8_t PWM_PIN[4] = {2, 5, 3, 4};  //for a quad+: rear,right,left,front
 
 
 void writeMotors() {      
+  uint16_t value; 
   for (int i=0; i<4; i++){
-    analogWrite(PWM_PIN[i], (motor[i]-1000)/4);
-
-    // // Debug motor PWM values sent to propellers
-    // Serial.println((motor[i]-1000)/4);
+    value = motor[i]-1000;
+    // if(i==1){
+    //   abs(value);
+    // }
+    analogWrite(PWM_PIN[i], value/4);
+    // Debug motor PWM values sent to propellers
+    Serial.println(value/4);
   }
 }
 

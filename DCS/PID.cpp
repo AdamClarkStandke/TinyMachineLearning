@@ -5,9 +5,9 @@ extern float axisCmd[];
 
 #define MYPIDITEMS 4
 float axisCmdPID[MYPIDITEMS] = { 0.0f, 0.0f, 0.0f, 0.0f };
-float pid_p[MYPIDITEMS] = { 1.0f, 0.8f,   0.8f,   3.0f }; // 4p & 0.5d yaw
-float pid_i[MYPIDITEMS] = { 0.0f, 0.03f,  0.03f,  0.07f };
-float pid_d[MYPIDITEMS] = { 0.0f, 0.3f,   0.3f,   0.9f };
+float pid_p[MYPIDITEMS] = { 0.5f, 0.5f,   0.5f,   0.5f }; // 4p & 0.5d yaw
+float pid_i[MYPIDITEMS] = { 0.0f, 0.0f,  0.0f,  0.0f };
+float pid_d[MYPIDITEMS] = { 0.0f, 0.0f,   0.0f,   0.0f };
 uint16_t tpaCutoff = 500;
 float tpaMult = 1.25f;
 

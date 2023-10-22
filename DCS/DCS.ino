@@ -11,7 +11,7 @@ extern uint16_t rcValue[];
 int16_t fastLoopTiming, slowLoopTiming;
 
 void setup() {
-    Serial.begin(9600);
+    Serial.begin(115200);
     initBLErx();
     initIMU();  
     initMotors();
@@ -46,7 +46,6 @@ void loop() {
   //   long slowLoopTimingStart = micros();
   //   slowLoopTiming = micros() - slowLoopTimingStart;
   // }
-
 }
 
 
